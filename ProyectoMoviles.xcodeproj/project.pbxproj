@@ -96,6 +96,7 @@
 				TargetAttributes = {
 					FA5978FC1F69D75C007F7C82 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 4J66785M8S;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -262,6 +263,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4J66785M8S;
 				INFOPLIST_FILE = ProyectoMoviles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = es.alejandroCortizoFranza.ProyectoMoviles;
@@ -274,6 +276,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4J66785M8S;
 				INFOPLIST_FILE = ProyectoMoviles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = es.alejandroCortizoFranza.ProyectoMoviles;
@@ -301,6 +304,7 @@
 				FA5979111F69D75C007F7C82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
