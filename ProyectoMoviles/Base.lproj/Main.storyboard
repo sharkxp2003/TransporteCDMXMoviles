@@ -235,7 +235,7 @@
             </objects>
             <point key="canvasLocation" x="1000.8" y="70.614692653673174"/>
         </scene>
-        <!--Item 2-->
+        <!--Análisis-->
         <scene sceneID="SlI-Fa-GWg">
             <objects>
                 <viewController id="xsx-je-MAv" sceneMemberID="viewController">
@@ -248,13 +248,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="48V-Pa-j1d"/>
+                    <tabBarItem key="tabBarItem" title="Análisis" image="increasing-stocks-graphic-of-bars" selectedImage="increasing-stocks-graphic-of-bars" id="48V-Pa-j1d">
+                        <color key="badgeColor" red="0.91764705879999997" green="0.23137254900000001" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DDy-Ji-mFG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="111" y="2388"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="YZF-rP-AZy">
             <objects>
                 <viewController id="KUN-WX-QTD" sceneMemberID="viewController">
@@ -267,13 +269,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="awp-9L-LdE"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home-icon-silhouette" selectedImage="home-icon-silhouette" id="awp-9L-LdE">
+                        <color key="badgeColor" red="0.91764705879999997" green="0.23137254900000001" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nL8-RS-3CV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-970" y="2360"/>
+            <point key="canvasLocation" x="1001" y="2388"/>
         </scene>
-        <!--Item 1-->
+        <!--Eventos-->
         <scene sceneID="ktd-3h-RjM">
             <objects>
                 <viewController id="kIo-C6-X74" sceneMemberID="viewController">
@@ -286,17 +290,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Yfl-fa-OOr"/>
+                    <tabBarItem key="tabBarItem" title="Eventos" image="event-on-day-10" selectedImage="event-on-day-10" id="Yfl-fa-OOr">
+                        <color key="badgeColor" red="0.91764705879999997" green="0.23137254900000001" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yjs-16-Hlg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1001" y="2388"/>
+            <point key="canvasLocation" x="-769" y="2388"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="tdB-Hr-toE">
             <objects>
                 <tabBarController storyboardIdentifier="Home" id="utE-QG-p4m" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="oku-zt-2go">
+                    <tabBar key="tabBar" contentMode="scaleToFill" itemPositioning="centered" id="oku-zt-2go">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -317,8 +323,11 @@
         <image name="backgroundEvents" width="640" height="166"/>
         <image name="calendar" width="50" height="50"/>
         <image name="camionCDMX" width="113" height="134"/>
+        <image name="event-on-day-10" width="16" height="16"/>
         <image name="events" width="234" height="233"/>
         <image name="fondo rosa" width="640" height="574"/>
+        <image name="home-icon-silhouette" width="16" height="16"/>
+        <image name="increasing-stocks-graphic-of-bars" width="16" height="16"/>
         <image name="keyIcon" width="53" height="53"/>
         <image name="labCDMX" width="181" height="181"/>
         <image name="labCDMXimg" width="513" height="312"/>
@@ -329,6 +338,6 @@
         <image name="userIcon" width="41" height="53"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xT6-Io-7UG"/>
+        <segue reference="iDu-zu-4uy"/>
     </inferredMetricsTieBreakers>
 </document>
