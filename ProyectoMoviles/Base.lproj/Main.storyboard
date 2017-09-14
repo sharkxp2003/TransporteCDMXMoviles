@@ -189,12 +189,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grn-tN-4LK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="45.600000000000001" y="739.88005997001505"/>
+            <point key="canvasLocation" x="-970" y="796"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="qL7-Im-ARL">
             <objects>
-                <viewController id="TQM-ZU-UvW" sceneMemberID="viewController">
+                <viewController id="TQM-ZU-UvW" customClass="WelcomeViewController" customModule="ProyectoMoviles" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="o1N-qb-QzY"/>
                         <viewControllerLayoutGuide type="bottom" id="Hf3-ia-Ei5"/>
@@ -235,6 +235,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="progressView" destination="mbM-Qn-FjD" id="8Zy-wH-snh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQL-cB-Wa8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -300,7 +303,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="tdB-Hr-toE">
             <objects>
-                <tabBarController id="utE-QG-p4m" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Home" id="utE-QG-p4m" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="oku-zt-2go">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
