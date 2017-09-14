@@ -378,7 +378,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="notification"/>
                                 <connections>
-                                    <segue destination="nNd-tp-e6d" kind="show" id="7yU-SJ-wtG"/>
+                                    <segue destination="nNd-tp-e6d" kind="show" id="ujx-sX-fbD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -511,7 +511,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back"/>
                                 <connections>
-                                    <segue destination="xsx-je-MAv" kind="show" id="i6x-u4-jgB"/>
+                                    <segue destination="utE-QG-p4m" kind="show" id="sVI-1l-hPb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -757,7 +757,7 @@
                                 <rect key="frame" x="0.0" y="236" width="375" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="zVM-lS-JBw" kind="show" id="8Ki-LF-ntl"/>
+                                    <segue destination="zVM-lS-JBw" kind="show" id="RTy-Kb-hMA"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Inicio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRT-Wl-fHo">
@@ -772,7 +772,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="circulo"/>
                                 <connections>
-                                    <segue destination="dWN-KP-vQu" kind="show" id="0eJ-Lw-9UC"/>
+                                    <segue destination="dWN-KP-vQu" kind="show" id="hBL-5R-zMg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acZ-Ty-r6c">
@@ -780,7 +780,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="notification"/>
                                 <connections>
-                                    <segue destination="nNd-tp-e6d" kind="show" id="JCM-Sb-Vzu"/>
+                                    <segue destination="nNd-tp-e6d" kind="show" id="cys-X1-oUF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -870,7 +870,7 @@
                                 <rect key="frame" x="0.0" y="194" width="375" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="utE-QG-p4m" kind="show" id="vEs-vL-Gj6"/>
+                                    <segue destination="utE-QG-p4m" kind="show" id="Yfw-tX-bPI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -978,6 +978,21 @@
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notificaciones" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gX-j6-ciY">
+                                <rect key="frame" x="278" y="58" width="81" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NP-SP-cVF">
+                                <rect key="frame" x="281" y="39" width="74" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="notification"/>
+                                <connections>
+                                    <segue destination="nNd-tp-e6d" kind="show" id="qSA-wu-Wdn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1068,7 +1083,7 @@
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="Cambiar Ruta" backgroundImage="PinkButton"/>
                                 <connections>
-                                    <segue destination="Pmg-SH-1qd" kind="showDetail" id="OAe-ZU-m3R"/>
+                                    <segue destination="Pmg-SH-1qd" kind="show" id="ylN-HE-en6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nm-K8-SUd">
@@ -1077,7 +1092,7 @@
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="Cerrar Sesión" backgroundImage="PinkButton"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="hn3-Gm-WWo"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="nSX-sU-Tij"/>
                                 </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="userIcon" translatesAutoresizingMaskIntoConstraints="NO" id="rGU-BR-c8v">
@@ -1107,7 +1122,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back"/>
                                 <connections>
-                                    <segue destination="utE-QG-p4m" kind="show" id="Rnx-yc-qy5"/>
+                                    <segue destination="utE-QG-p4m" kind="show" id="skM-mI-jZ2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1199,7 +1214,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back"/>
                                 <connections>
-                                    <segue destination="utE-QG-p4m" kind="show" id="pNR-PC-EN0"/>
+                                    <segue destination="utE-QG-p4m" kind="show" id="GfT-EA-Jn1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lsn-Lg-SwL">
@@ -1208,7 +1223,7 @@
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="Dar salida" backgroundImage="PinkButton"/>
                                 <connections>
-                                    <segue destination="utE-QG-p4m" kind="show" id="e0b-ik-dNP"/>
+                                    <segue destination="utE-QG-p4m" kind="show" id="Y7I-e9-SzX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1287,7 +1302,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="notification"/>
                                 <connections>
-                                    <segue destination="nNd-tp-e6d" kind="show" id="5aE-rM-kDp"/>
+                                    <segue destination="nNd-tp-e6d" kind="show" id="xue-F0-qdy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1301,7 +1316,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HaY-vS-bcw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="k1o-Xg-B6X">
                     <connections>
-                        <segue destination="BM9-5U-Ow4" kind="show" id="n8r-WL-jhC"/>
+                        <segue destination="utE-QG-p4m" kind="show" id="T8g-hQ-S5w"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -1317,9 +1332,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="U32-76-QNM" kind="relationship" relationship="viewControllers" id="LCr-WQ-egS"/>
                         <segue destination="xsx-je-MAv" kind="relationship" relationship="viewControllers" id="Vpc-eI-Ijo"/>
                         <segue destination="BM9-5U-Ow4" kind="relationship" relationship="viewControllers" id="9h0-98-bVj"/>
+                        <segue destination="U32-76-QNM" kind="relationship" relationship="viewControllers" id="LCr-WQ-egS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2hc-ip-5Nu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1363,9 +1378,7 @@
         <image name="warning" width="185" height="163"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Vpc-eI-Ijo"/>
-        <segue reference="Rnx-yc-qy5"/>
-        <segue reference="9h0-98-bVj"/>
-        <segue reference="JCM-Sb-Vzu"/>
+        <segue reference="Yfw-tX-bPI"/>
+        <segue reference="cys-X1-oUF"/>
     </inferredMetricsTieBreakers>
 </document>
