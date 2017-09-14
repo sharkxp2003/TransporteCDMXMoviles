@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -189,8 +189,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grn-tN-4LK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="45.600000000000001" y="739.88005997001505"/>
+            <point key="canvasLocation" x="-970" y="796"/>
         </scene>
+<<<<<<< HEAD
         <!--View Controller-->
         <scene sceneID="Bnh-yh-g9T">
             <objects>
@@ -293,9 +294,12 @@
             <point key="canvasLocation" x="1000.8" y="739.88005997001505"/>
         </scene>
         <!--View Controller-->
+=======
+        <!--Welcome View Controller-->
+>>>>>>> 1e238fbd73602c21b92016eec871b926f0c744ec
         <scene sceneID="qL7-Im-ARL">
             <objects>
-                <viewController id="TQM-ZU-UvW" sceneMemberID="viewController">
+                <viewController id="TQM-ZU-UvW" customClass="WelcomeViewController" customModule="ProyectoMoviles" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="o1N-qb-QzY"/>
                         <viewControllerLayoutGuide type="bottom" id="Hf3-ia-Ei5"/>
@@ -325,23 +329,18 @@
                                 <color key="tintColor" red="0.91764705882352937" green="0.23137254901960785" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.75" height="1"/>
                             </progressView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fgg-V3-3L9">
-                                <rect key="frame" x="216" y="515" width="96" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Prueba"/>
-                                <connections>
-                                    <segue destination="lhk-lo-qkT" kind="show" id="MjL-js-Wb4"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="progressView" destination="mbM-Qn-FjD" id="8Zy-wH-snh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQL-cB-Wa8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1000.8" y="70.614692653673174"/>
         </scene>
-        <!--Item 2-->
+        <!--Inicio-->
         <scene sceneID="SlI-Fa-GWg">
             <objects>
                 <viewController id="xsx-je-MAv" sceneMemberID="viewController">
@@ -352,13 +351,26 @@
                     <view key="view" contentMode="scaleToFill" id="49J-sl-v5g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundEvents" translatesAutoresizingMaskIntoConstraints="NO" id="pht-tY-PLV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Inicio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRT-Wl-fHo">
+                                <rect key="frame" x="129" y="54" width="117" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="48V-Pa-j1d"/>
+                    <tabBarItem key="tabBarItem" title="Inicio" id="48V-Pa-j1d"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DDy-Ji-mFG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="111" y="2388"/>
+            <point key="canvasLocation" x="109.59999999999999" y="2387.8560719640182"/>
         </scene>
         <!--Item-->
         <scene sceneID="YZF-rP-AZy">
@@ -401,7 +413,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="tdB-Hr-toE">
             <objects>
-                <tabBarController id="utE-QG-p4m" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Home" id="utE-QG-p4m" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="oku-zt-2go">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
