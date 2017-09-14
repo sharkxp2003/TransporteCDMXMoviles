@@ -389,7 +389,7 @@
         <scene sceneID="3vt-DQ-2ue">
             <objects>
                 <navigationController id="CP8-K1-YQ8" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oUI-16-WqF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oUI-16-WqF">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -696,9 +696,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Inicio" image="increasing-stocks-graphic-of-bars" selectedImage="home-icon-silhouette" id="48V-Pa-j1d">
-                        <color key="badgeColor" red="0.91764705879999997" green="0.23137254900000001" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Inicio" image="increasing-stocks-graphic-of-bars" selectedImage="home-icon-silhouette" id="48V-Pa-j1d"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DDy-Ji-mFG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -717,9 +715,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Rutas" image="location-on-road-2" selectedImage="location-on-road-2" id="awp-9L-LdE">
-                        <color key="badgeColor" red="0.91764705879999997" green="0.23137254900000001" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Rutas" image="location-on-road-2" selectedImage="location-on-road-2" id="awp-9L-LdE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nL8-RS-3CV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -988,6 +984,7 @@
         <image name="PinkButton" width="411" height="83"/>
         <image name="backgroundEvents" width="640" height="166"/>
         <image name="bus-3" width="128" height="128"/>
+        <image name="bus2" width="56" height="58"/>
         <image name="camionCDMX" width="113" height="134"/>
         <image name="circulo" width="210" height="200"/>
         <image name="clock" width="20" height="18"/>
@@ -995,6 +992,7 @@
         <image name="event-on-day-10" width="16" height="16"/>
         <image name="fondo rosa" width="640" height="574"/>
         <image name="home-icon-silhouette" width="16" height="16"/>
+        <image name="increasing-stocks-graphic-of-bars" width="16" height="16"/>
         <image name="keyIcon" width="53" height="53"/>
         <image name="labCDMX" width="181" height="181"/>
         <image name="labCDMXimg" width="513" height="312"/>
