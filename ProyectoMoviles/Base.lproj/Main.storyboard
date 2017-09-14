@@ -224,14 +224,6 @@
                                 <color key="tintColor" red="0.91764705882352937" green="0.23137254901960785" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.75" height="1"/>
                             </progressView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fgg-V3-3L9">
-                                <rect key="frame" x="216" y="515" width="96" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Prueba"/>
-                                <connections>
-                                    <segue destination="lhk-lo-qkT" kind="show" id="MjL-js-Wb4"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
