@@ -767,6 +767,21 @@
                                 <rect key="frame" x="154" y="71" width="67" height="74"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Culturales" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q29-9A-7Sj">
+                                <rect key="frame" x="16" y="180" width="80" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afp-wl-Tw8">
+                                <rect key="frame" x="-83" y="280" width="375" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="rectanglelogin-1" translatesAutoresizingMaskIntoConstraints="NO" id="FQZ-aX-xYU">
+                                <rect key="frame" x="0.0" y="218" width="375" height="96"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1087,6 +1102,8 @@
         <image name="Percentage" width="290" height="186"/>
         <image name="Percentage2" width="184" height="180"/>
         <image name="PinkButton" width="411" height="83"/>
+        <image name="Screen Shot 2017-08-28 at 10.06.44 PM" width="2860" height="1734"/>
+        <image name="Screen Shot 2017-09-14 at 2.14.42 AM" width="830" height="162"/>
         <image name="back" width="26" height="46"/>
         <image name="backgroundEvents" width="640" height="166"/>
         <image name="bus-3" width="128" height="128"/>
