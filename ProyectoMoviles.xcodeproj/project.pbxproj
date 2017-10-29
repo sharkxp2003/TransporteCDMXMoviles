@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BFC9CA7A1FA5A1CC006410D2 /* RoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC9CA791FA5A1CC006410D2 /* RoutesViewController.swift */; };
+		BFC9CA7C1FA5A756006410D2 /* DetalleRutasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC9CA7B1FA5A756006410D2 /* DetalleRutasViewController.swift */; };
 		EA057F2E1F6A151500B5E52F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA057F2D1F6A151500B5E52F /* WelcomeViewController.swift */; };
 		FA5979011F69D75C007F7C82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5979001F69D75C007F7C82 /* AppDelegate.swift */; };
 		FA5979031F69D75C007F7C82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5979021F69D75C007F7C82 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BFC9CA791FA5A1CC006410D2 /* RoutesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesViewController.swift; sourceTree = "<group>"; };
+		BFC9CA7B1FA5A756006410D2 /* DetalleRutasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleRutasViewController.swift; sourceTree = "<group>"; };
 		EA057F2D1F6A151500B5E52F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		FA5978FD1F69D75C007F7C82 /* ProyectoMoviles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProyectoMoviles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5979001F69D75C007F7C82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 				FA5979001F69D75C007F7C82 /* AppDelegate.swift */,
 				FA5979021F69D75C007F7C82 /* ViewController.swift */,
 				FA5979041F69D75C007F7C82 /* Main.storyboard */,
+				BFC9CA7B1FA5A756006410D2 /* DetalleRutasViewController.swift */,
+				BFC9CA791FA5A1CC006410D2 /* RoutesViewController.swift */,
 				FA5979071F69D75C007F7C82 /* Assets.xcassets */,
 				FA5979091F69D75C007F7C82 /* LaunchScreen.storyboard */,
 				FA59790C1F69D75C007F7C82 /* Info.plist */,
@@ -141,7 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA057F2E1F6A151500B5E52F /* WelcomeViewController.swift in Sources */,
+				BFC9CA7C1FA5A756006410D2 /* DetalleRutasViewController.swift in Sources */,
 				FA5979031F69D75C007F7C82 /* ViewController.swift in Sources */,
+				BFC9CA7A1FA5A1CC006410D2 /* RoutesViewController.swift in Sources */,
 				FA5979011F69D75C007F7C82 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
