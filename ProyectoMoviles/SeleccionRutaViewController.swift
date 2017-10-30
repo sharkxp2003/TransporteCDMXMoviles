@@ -13,8 +13,10 @@ class SeleccionRutaViewController: UITableViewController, UISearchResultsUpdatin
     
 
     let serverData="http://199.233.252.86/201713/printf/rutas.json"
-    var datosFiltrados = [Any]()
+    
+    var datosFiltrados:[ObjectRutas] = [ObjectRutas]()
     let searchController = UISearchController(searchResultsController: nil)
+    
     var indice = 0
     //var objetoRuta = [String:Any]()
     var nombreRuta = String()
@@ -74,6 +76,19 @@ class SeleccionRutaViewController: UITableViewController, UISearchResultsUpdatin
         return coleccionRutas
     }
     
+    func updateSearchResults(for searchController: UISearchController) {
+        if searchController.searchBar.text! == "" {
+            datosFiltrados = coleccionRutasObject
+            print(rutas.rutas)
+        } else {
+            datosFiltrados = coleccionRutasObject.filter {
+                let nombreRuta = $0.nombre
+                return(nombreRuta.lowercased().contains(searchController.searchBar.text!.lowercased()))
+                
+            }
+            self.tableView.reloadData()
+        }
+    }
     
     
     override func viewDidLoad() {
@@ -85,6 +100,7 @@ class SeleccionRutaViewController: UITableViewController, UISearchResultsUpdatin
         
         coleccionRutasObject = jsonToObject(rutas: rutas)
         
+        datosFiltrados = coleccionRutasObject
         
         //usar la vista actual para presentar los resultados de la búsqueda
         searchController.searchResultsUpdater = self
@@ -102,21 +118,6 @@ class SeleccionRutaViewController: UITableViewController, UISearchResultsUpdatin
         tableView.tableHeaderView = searchController.searchBar
     }
     
-    func updateSearchResults(for searchController: UISearchController) {
-        
-        
-        if searchController.searchBar.text! == "" {
-            datosFiltrados = rutas.rutas;
-        } else {
-            datosFiltrados = rutas.rutas.filter {
-                let nombreRuta=$0.nombre;
-                return(nombreRuta.lowercased().contains(searchController.searchBar.text!.lowercased()))
-            }
-            
-            self.tableView.reloadData()
-        }
-    }
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -124,13 +125,15 @@ class SeleccionRutaViewController: UITableViewController, UISearchResultsUpdatin
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // remplazar el uso de nuevoArray por datosFiltrados
-        return (rutas.rutas.count)
+        return (datosFiltrados.count)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "EntradaRuta", for: indexPath)
-        let ruta = rutas.rutas[indexPath.row]
-        cell.textLabel?.text = "     "+ruta.ruta+" "+ruta.nombre
+        let ruta = datosFiltrados[indexPath.row]
+        
+        cell.textLabel?.text = "     "+ruta.ruta+"    "+ruta.nombre
         
         return cell
     }
@@ -153,9 +156,9 @@ class SeleccionRutaViewController: UITableViewController, UISearchResultsUpdatin
         let sigVista=segue.destination as! DetalleRutasViewController
         //let nombre:String = rutas.rutas[tableView.indexPathForSelectedRow!.row].nombre
         
-        print(coleccionRutasObject[tableView.indexPathForSelectedRow!.row].getNombreRuta());
+        print(datosFiltrados[tableView.indexPathForSelectedRow!.row].getNombreRuta());
         print(indice)
-        sigVista.setRuta(objectRuta: coleccionRutasObject[tableView.indexPathForSelectedRow!.row])
+        sigVista.setRuta(objectRuta: datosFiltrados[tableView.indexPathForSelectedRow!.row])
     }
     
     
