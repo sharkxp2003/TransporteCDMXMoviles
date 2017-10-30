@@ -11,7 +11,7 @@ import UIKit
 
 class DetalleRutasViewController: UIViewController {
     
-    var nombre:String="N1"
+    var nombre:String="Balderas-Santa Fé"
     @IBOutlet weak var rutaName: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,14 @@ class DetalleRutasViewController: UIViewController {
         rutaName.text = nombre
     }
     
+   /* override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      
+        let siguienteVista = segue.destination as! RutaDetalleViewController
+     
+        let s:String = nombre 
+        
+        siguienteVista.name = s
+    }*/
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
