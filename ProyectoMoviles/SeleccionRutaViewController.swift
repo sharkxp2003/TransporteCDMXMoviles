@@ -76,21 +76,6 @@ class SeleccionRutaViewController: UITableViewController, UISearchResultsUpdatin
         return coleccionRutas
     }
     
-    func updateSearchResults(for searchController: UISearchController) {
-        if searchController.searchBar.text! == "" {
-            datosFiltrados = coleccionRutasObject
-            print(rutas.rutas)
-        } else {
-            datosFiltrados = coleccionRutasObject.filter {
-                let nombreRuta = $0.nombre
-                return(nombreRuta.lowercased().contains(searchController.searchBar.text!.lowercased()))
-                
-            }
-            self.tableView.reloadData()
-        }
-    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -116,6 +101,21 @@ class SeleccionRutaViewController: UITableViewController, UISearchResultsUpdatin
         
         //Instalar la barra de búsqueda en la cabecera de la tabla
         tableView.tableHeaderView = searchController.searchBar
+    }
+    
+
+    func updateSearchResults(for searchController: UISearchController) {
+        if searchController.searchBar.text! == "" {
+            datosFiltrados = coleccionRutasObject
+            print(rutas.rutas)
+        } else {
+            datosFiltrados = coleccionRutasObject.filter {
+                let nombreRuta = $0.nombre
+                return(nombreRuta.lowercased().contains(searchController.searchBar.text!.lowercased()))
+                
+            }
+            self.tableView.reloadData()
+        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
