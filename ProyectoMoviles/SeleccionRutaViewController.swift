@@ -104,7 +104,6 @@ class SeleccionRutaViewController: UITableViewController, UISearchResultsUpdatin
     
     func updateSearchResults(for searchController: UISearchController) {
         
-        
         if searchController.searchBar.text! == "" {
             datosFiltrados = rutas.rutas;
         } else {
