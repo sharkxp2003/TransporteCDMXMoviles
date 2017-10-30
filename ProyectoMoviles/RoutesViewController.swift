@@ -33,6 +33,7 @@ class RoutesViewController: UITableViewController {
         return [AnyObject]()
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,7 +57,8 @@ class RoutesViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         //return datos.count
-        
+        print(dataArray)
+
         //paso 5 remplazar el uso de datos por nuevoArray
         return (dataArray?.count)!
     }
@@ -69,10 +71,13 @@ class RoutesViewController: UITableViewController {
         //cell.textLabel?.text = datos[indexPath.row]
         //paso 6 remplazar el uso de datos por nuevoArray
         //objeto marca es un diccionario que contiene marca y agencias
-        let nombreRuta = dataArray?[indexPath.row] as! [String: Any]
-        let s:String = nombreRuta["nombre"] as! String
+        let ruta = dataArray?[indexPath.row] as! [String: AnyObject]
+        //let sN:String = ruta["rutas.ruta"] as! String
+       // let s:String = ruta["rutas.nombre"] as! String
+        let sN:String = ruta["ruta"] as! String
+         let s:String = ruta["nombre"] as! String
         
-        cell.textLabel?.text=s
+        cell.textLabel?.text = "     "+sN+" "+s
         
         return cell
     }
