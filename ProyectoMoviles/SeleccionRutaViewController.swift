@@ -82,6 +82,7 @@ class SeleccionRutaViewController: UITableViewController, UISearchResultsUpdatin
         let url = URL(string: serverData)
         let datosJSON = try! Data(contentsOf: url!, options : [])
         rutas = try! decoder.decode(Rutas.self, from:datosJSON)
+        
         coleccionRutasObject = jsonToObject(rutas: rutas)
         
         
@@ -152,9 +153,9 @@ class SeleccionRutaViewController: UITableViewController, UISearchResultsUpdatin
         let sigVista=segue.destination as! DetalleRutasViewController
         //let nombre:String = rutas.rutas[tableView.indexPathForSelectedRow!.row].nombre
         
-        print(coleccionRutasObject[indice].getNombreRuta());
-        
-        sigVista.setRuta(objectRuta: coleccionRutasObject[indice])
+        print(coleccionRutasObject[tableView.indexPathForSelectedRow!.row].getNombreRuta());
+        print(indice)
+        sigVista.setRuta(objectRuta: coleccionRutasObject[tableView.indexPathForSelectedRow!.row])
     }
     
     

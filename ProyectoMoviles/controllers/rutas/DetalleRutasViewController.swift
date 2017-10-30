@@ -66,6 +66,8 @@ class DetalleRutasViewController: UIViewController {
         rutaName.text = ruta == nil ? auxRuta.nombre : ruta.getNombreRuta()
     }
     
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
