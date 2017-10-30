@@ -871,7 +871,7 @@
         <!--RutaTable-->
         <scene sceneID="2dj-q3-9OJ">
             <objects>
-                <tableViewController title="Seleccionar Ruta" id="nWK-Wz-nnf" userLabel="RutaTable" customClass="RoutesViewController" customModule="ProyectoMoviles" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Seleccionar Ruta" id="nWK-Wz-nnf" userLabel="RutaTable" customClass="SeleccionRutaViewController" customModule="ProyectoMoviles" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zx2-sK-Pbk" userLabel="Ruta">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1607,6 +1607,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="UCW-67-4Ij"/>
         <segue reference="skM-mI-jZ2"/>
-        <segue reference="5Ae-Ha-6Ko"/>
+        <segue reference="MAj-0I-R2q"/>
     </inferredMetricsTieBreakers>
 </document>

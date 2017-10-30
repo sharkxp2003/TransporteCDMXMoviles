@@ -13,6 +13,20 @@ class NotificationViewController: UITableViewController {
         let serverData="http://199.233.252.86/201713/printf/notificacion.json"
         
         var dataArray:[Any]?
+    
+        let decoder = JSONDecoder()
+    
+        struct DetailNotification:Codable {
+            let id:Int
+            let hora:String
+            let descripcion:String
+        }
+    
+    struct Notification:Codable {
+        let detail:DetailNotification
+    }
+    
+    
         
         // funcion que convierte de JSON a Array
         func JSONParseArray(_ string: String) -> [AnyObject]{
@@ -32,8 +46,15 @@ class NotificationViewController: UITableViewController {
             super.viewDidLoad()
             
             let url = URL(string: serverData)
-            let datosJSON = try? Data(contentsOf: url!)
-            dataArray = try! JSONSerialization.jsonObject(with: datosJSON!) as? [Any]
+            let datosJSON = try! Data(contentsOf: url!)
+            dataArray = try! JSONSerialization.jsonObject(with: datosJSON) as? [Any]
+         
+            
+            //let url = URL(string: serverData)
+            //let datosJSON = try! Data(contentsOf: url!, options : [])
+            
+
+            
             
             print(dataArray)
         }
