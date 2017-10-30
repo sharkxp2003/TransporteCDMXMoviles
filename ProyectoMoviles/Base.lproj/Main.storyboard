@@ -583,7 +583,7 @@
         <!--Inicio-->
         <scene sceneID="SlI-Fa-GWg">
             <objects>
-                <viewController id="xsx-je-MAv" customClass="DetalleRutasViewController" customModule="ProyectoMoviles" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Detalle" id="xsx-je-MAv" customClass="DetalleRutasViewController" customModule="ProyectoMoviles" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rXc-GE-8Df"/>
                         <viewControllerLayoutGuide type="bottom" id="DJW-7o-hyd"/>
@@ -1605,7 +1605,7 @@
         <image name="warning" width="185" height="163"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2WY-yy-LU9"/>
+        <segue reference="UCW-67-4Ij"/>
         <segue reference="skM-mI-jZ2"/>
         <segue reference="5Ae-Ha-6Ko"/>
     </inferredMetricsTieBreakers>
