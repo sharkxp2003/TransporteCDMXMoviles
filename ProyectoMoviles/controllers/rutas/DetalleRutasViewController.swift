@@ -63,7 +63,7 @@ class DetalleRutasViewController: UIViewController {
 
        auxRuta = try! decoder.decode(Ruta.self, from:datosJSON)
         
-        rutaName.text = ruta.getNombreRuta() == nil ? auxRuta.nombre : ruta.getNombreRuta()
+        rutaName.text = ruta == nil ? auxRuta.nombre : ruta.getNombreRuta()
     }
     
 
