@@ -154,7 +154,7 @@ class SeleccionRutaViewController: UITableViewController, UISearchResultsUpdatin
         
         print(coleccionRutasObject[indice].getNombreRuta());
         
-        sigVista.setRuta(ruta: coleccionRutasObject[indice])
+        sigVista.setRuta(objectRuta: coleccionRutasObject[indice])
     }
     
     
