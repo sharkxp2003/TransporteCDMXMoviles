@@ -53,8 +53,9 @@ class DetalleRutasViewController: UIViewController {
     var ruta:ObjectRutas!
     var paradas:[ObjectParada] = [ObjectParada]()
     var auxRuta:Ruta!
- 
-
+    
+   // var arrayParadas:[String] = [String](repeating: "", count: 3)
+    var arrayParadas : [String] = []
     
     @IBOutlet weak var rutaName: UILabel!
  
@@ -75,21 +76,18 @@ class DetalleRutasViewController: UIViewController {
         
         rutaName.text = ruta == nil ? auxRuta.nombre : ruta.getNombreRuta()
         
-     //   parada1.text = paradas[0].no
-    //    parada2.text = paradas[1].getNombreParada()
-     //   parada3.text = paradas[2].getNombreParada()
+    //    parada1.text = paradas[0]
         
-     //   for index in 0...paradas.count {
             for parada in paradas{
-                print(parada)
-                parada1.text = parada.getNombreParada()
-            }
-          
-     //   }
-    /*    for (index, parada) in paradas.enumerated() {
+                arrayParadas = [parada.nombreParada]
+             
+           }
+
+        for (index, parada) in paradas.enumerated() {
             let label : UILabel = self.view.viewWithTag(index) as! UILabel
-            label.text = parada.getNombreParada() as String
-        }*/
+            label.text = parada.getNombreParada()
+          
+        }
     }
     
     
