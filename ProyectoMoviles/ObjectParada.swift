@@ -41,7 +41,10 @@ class ObjectParada {
         self.direccion = direccion
     }
     
-    
-    
-    
+    func getNombreParada() -> String {
+        return nombreParada
+    }
+    func getNoAutobus() -> String {
+        return noAutobus
+    }
 }

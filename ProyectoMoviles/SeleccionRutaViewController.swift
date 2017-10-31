@@ -23,6 +23,8 @@ class SeleccionRutaViewController: UITableViewController, UISearchResultsUpdatin
     let decoder = JSONDecoder()
     var rutas:Rutas!
     var coleccionRutasObject:[ObjectRutas] = [ObjectRutas]()
+    var coleccionParadasObject:[ObjectRutas] = [ObjectRutas]()
+    var paradasFiltradas:[ObjectParada] = [ObjectParada]()
     var algo:String = "AAA"
     
     
@@ -157,7 +159,16 @@ class SeleccionRutaViewController: UITableViewController, UISearchResultsUpdatin
         //let nombre:String = rutas.rutas[tableView.indexPathForSelectedRow!.row].nombre
         
         print(datosFiltrados[tableView.indexPathForSelectedRow!.row].getNombreRuta());
+        
         print(indice)
+        paradasFiltradas =  datosFiltrados[tableView.indexPathForSelectedRow!.row].getParadasDeRuta()
+        print(paradasFiltradas)
+        
+        for parada in paradasFiltradas{
+          print(parada.getNombreParada())
+        }
+       sigVista.paradas = paradasFiltradas
+        
         sigVista.setRuta(objectRuta: datosFiltrados[tableView.indexPathForSelectedRow!.row])
     }
     

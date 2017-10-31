@@ -51,19 +51,45 @@ class DetalleRutasViewController: UIViewController {
     
     var nombre:String = "placeholder"
     var ruta:ObjectRutas!
+    var paradas:[ObjectParada] = [ObjectParada]()
     var auxRuta:Ruta!
+ 
+
     
     @IBOutlet weak var rutaName: UILabel!
  
+    @IBOutlet weak var parada1: UILabel!
+    
+    @IBOutlet weak var parada2: UILabel!
+    
+    @IBOutlet weak var parada3: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+      print(paradas.count)
         let url = URL(string: serverData)
         let datosJSON = try! Data(contentsOf: url!, options : [])
 
        auxRuta = try! decoder.decode(Ruta.self, from:datosJSON)
         
         rutaName.text = ruta == nil ? auxRuta.nombre : ruta.getNombreRuta()
+        
+     //   parada1.text = paradas[0].no
+    //    parada2.text = paradas[1].getNombreParada()
+     //   parada3.text = paradas[2].getNombreParada()
+        
+     //   for index in 0...paradas.count {
+            for parada in paradas{
+                print(parada)
+                parada1.text = parada.getNombreParada()
+            }
+          
+     //   }
+    /*    for (index, parada) in paradas.enumerated() {
+            let label : UILabel = self.view.viewWithTag(index) as! UILabel
+            label.text = parada.getNombreParada() as String
+        }*/
     }
     
     
@@ -84,4 +110,9 @@ class DetalleRutasViewController: UIViewController {
         
     }
     
+    func setParada(objectParada:ObjectParada){
+    
+        self.paradas = [objectParada]
+    }
+
 }
