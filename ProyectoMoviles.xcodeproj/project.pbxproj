@@ -20,10 +20,12 @@
 		FA5979061F69D75C007F7C82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5979041F69D75C007F7C82 /* Main.storyboard */; };
 		FA5979081F69D75C007F7C82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5979071F69D75C007F7C82 /* Assets.xcassets */; };
 		FA59790B1F69D75C007F7C82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5979091F69D75C007F7C82 /* LaunchScreen.storyboard */; };
+		FA74D7241FAA510D00CB074C /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = FA74D7231FAA510D00CB074C /* art.scnassets */; };
 		FAB0EE661FA789EB006FC5D1 /* SeleccionRutaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0EE651FA789EB006FC5D1 /* SeleccionRutaViewController.swift */; };
 		FAB0EE681FA7926D006FC5D1 /* ObjectRutas.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0EE671FA7926D006FC5D1 /* ObjectRutas.swift */; };
 		FAB0EE6A1FA79CC5006FC5D1 /* ObjectParada.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0EE691FA79CC5006FC5D1 /* ObjectParada.swift */; };
 		FAB0EE6C1FA79D0A006FC5D1 /* ObjectDireccion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0EE6B1FA79D0A006FC5D1 /* ObjectDireccion.swift */; };
+		FAE3FA1F1FAA3EBE002E0682 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE3FA1E1FAA3EBE002E0682 /* ARViewController.swift */; };
 		FAEA23111FA9A49200687C0C /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA23101FA9A49200687C0C /* JsonParser.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,10 +45,12 @@
 		FA5979071F69D75C007F7C82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA59790A1F69D75C007F7C82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA59790C1F69D75C007F7C82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA74D7231FAA510D00CB074C /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		FAB0EE651FA789EB006FC5D1 /* SeleccionRutaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeleccionRutaViewController.swift; sourceTree = "<group>"; };
 		FAB0EE671FA7926D006FC5D1 /* ObjectRutas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectRutas.swift; sourceTree = "<group>"; };
 		FAB0EE691FA79CC5006FC5D1 /* ObjectParada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectParada.swift; sourceTree = "<group>"; };
 		FAB0EE6B1FA79D0A006FC5D1 /* ObjectDireccion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDireccion.swift; sourceTree = "<group>"; };
+		FAE3FA1E1FAA3EBE002E0682 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		FAEA23101FA9A49200687C0C /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,12 +102,10 @@
 		FA5978FF1F69D75C007F7C82 /* ProyectoMoviles */ = {
 			isa = PBXGroup;
 			children = (
+				FAE3FA1D1FAA3E68002E0682 /* AR */,
+				FAE3FA1C1FAA3B39002E0682 /* objects */,
 				FA84170B1FA71A5500799128 /* controllers */,
 				FA5979001F69D75C007F7C82 /* AppDelegate.swift */,
-				FAEA23101FA9A49200687C0C /* JsonParser.swift */,
-				FAB0EE6B1FA79D0A006FC5D1 /* ObjectDireccion.swift */,
-				FAB0EE671FA7926D006FC5D1 /* ObjectRutas.swift */,
-				FAB0EE691FA79CC5006FC5D1 /* ObjectParada.swift */,
 				FA5979021F69D75C007F7C82 /* ViewController.swift */,
 				FA5979041F69D75C007F7C82 /* Main.storyboard */,
 				FA5979071F69D75C007F7C82 /* Assets.xcassets */,
@@ -157,6 +159,26 @@
 				BF0784A71FA6DCC2001BF4C4 /* EventoViewController.swift */,
 			);
 			path = eventos;
+			sourceTree = "<group>";
+		};
+		FAE3FA1C1FAA3B39002E0682 /* objects */ = {
+			isa = PBXGroup;
+			children = (
+				FAEA23101FA9A49200687C0C /* JsonParser.swift */,
+				FAB0EE6B1FA79D0A006FC5D1 /* ObjectDireccion.swift */,
+				FAB0EE671FA7926D006FC5D1 /* ObjectRutas.swift */,
+				FAB0EE691FA79CC5006FC5D1 /* ObjectParada.swift */,
+			);
+			path = objects;
+			sourceTree = "<group>";
+		};
+		FAE3FA1D1FAA3E68002E0682 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				FA74D7231FAA510D00CB074C /* art.scnassets */,
+				FAE3FA1E1FAA3EBE002E0682 /* ARViewController.swift */,
+			);
+			path = AR;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA59790B1F69D75C007F7C82 /* LaunchScreen.storyboard in Resources */,
+				FA74D7241FAA510D00CB074C /* art.scnassets in Resources */,
 				FA5979081F69D75C007F7C82 /* Assets.xcassets in Resources */,
 				FA5979061F69D75C007F7C82 /* Main.storyboard in Resources */,
 			);
@@ -235,6 +258,7 @@
 				EA057F2E1F6A151500B5E52F /* WelcomeViewController.swift in Sources */,
 				BFC9CA7E1FA69E02006410D2 /* UserViewController.swift in Sources */,
 				BFC9CA7C1FA5A756006410D2 /* DetalleRutasViewController.swift in Sources */,
+				FAE3FA1F1FAA3EBE002E0682 /* ARViewController.swift in Sources */,
 				FAB0EE6C1FA79D0A006FC5D1 /* ObjectDireccion.swift in Sources */,
 				FAB0EE6A1FA79CC5006FC5D1 /* ObjectParada.swift in Sources */,
 				FAB0EE681FA7926D006FC5D1 /* ObjectRutas.swift in Sources */,
