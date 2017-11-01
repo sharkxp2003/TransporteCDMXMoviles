@@ -25,6 +25,7 @@
 		FAB0EE681FA7926D006FC5D1 /* ObjectRutas.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0EE671FA7926D006FC5D1 /* ObjectRutas.swift */; };
 		FAB0EE6A1FA79CC5006FC5D1 /* ObjectParada.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0EE691FA79CC5006FC5D1 /* ObjectParada.swift */; };
 		FAB0EE6C1FA79D0A006FC5D1 /* ObjectDireccion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0EE6B1FA79D0A006FC5D1 /* ObjectDireccion.swift */; };
+		FACACA821FAA697700598AF0 /* ParadaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACACA811FAA697700598AF0 /* ParadaViewController.swift */; };
 		FAE3FA1F1FAA3EBE002E0682 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE3FA1E1FAA3EBE002E0682 /* ARViewController.swift */; };
 		FAEA23111FA9A49200687C0C /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA23101FA9A49200687C0C /* JsonParser.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +51,7 @@
 		FAB0EE671FA7926D006FC5D1 /* ObjectRutas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectRutas.swift; sourceTree = "<group>"; };
 		FAB0EE691FA79CC5006FC5D1 /* ObjectParada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectParada.swift; sourceTree = "<group>"; };
 		FAB0EE6B1FA79D0A006FC5D1 /* ObjectDireccion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDireccion.swift; sourceTree = "<group>"; };
+		FACACA811FAA697700598AF0 /* ParadaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParadaViewController.swift; sourceTree = "<group>"; };
 		FAE3FA1E1FAA3EBE002E0682 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		FAEA23101FA9A49200687C0C /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +104,7 @@
 		FA5978FF1F69D75C007F7C82 /* ProyectoMoviles */ = {
 			isa = PBXGroup;
 			children = (
+				FACACA801FAA696300598AF0 /* paradas */,
 				FAE3FA1D1FAA3E68002E0682 /* AR */,
 				FAE3FA1C1FAA3B39002E0682 /* objects */,
 				FA84170B1FA71A5500799128 /* controllers */,
@@ -159,6 +162,14 @@
 				BF0784A71FA6DCC2001BF4C4 /* EventoViewController.swift */,
 			);
 			path = eventos;
+			sourceTree = "<group>";
+		};
+		FACACA801FAA696300598AF0 /* paradas */ = {
+			isa = PBXGroup;
+			children = (
+				FACACA811FAA697700598AF0 /* ParadaViewController.swift */,
+			);
+			path = paradas;
 			sourceTree = "<group>";
 		};
 		FAE3FA1C1FAA3B39002E0682 /* objects */ = {
@@ -269,6 +280,7 @@
 				BF0784A81FA6DCC2001BF4C4 /* EventoViewController.swift in Sources */,
 				FAEA23111FA9A49200687C0C /* JsonParser.swift in Sources */,
 				BF0784AA1FA6F030001BF4C4 /* RutaDetalleViewController.swift in Sources */,
+				FACACA821FAA697700598AF0 /* ParadaViewController.swift in Sources */,
 				FA171FA11FA97FC900D96270 /* SeleccionRutaCellViewController.swift in Sources */,
 				FA5979011F69D75C007F7C82 /* AppDelegate.swift in Sources */,
 			);

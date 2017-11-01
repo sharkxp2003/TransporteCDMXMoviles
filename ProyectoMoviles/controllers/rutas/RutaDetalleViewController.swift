@@ -9,16 +9,22 @@
 import UIKit
 
 class RutaDetalleViewController: UIViewController {
-
+    
+    let serverData="http://199.233.252.86/201713/printf/rutaDetalle.json"
     @IBOutlet weak var nombre: UILabel!
     var name:String = "Balderas"
+    var ruta:ObjectRutas!
+    var auxRuta: ObjectRutas!
+    var parada:ObjectParada!
+    var jsonParser:JsonParser!
    
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        nombre.text = name
+        
+        jsonParser = JsonParser(serverData: serverData)
+        ruta = auxRuta == nil ? jsonParser.rutaJsonToObject() : auxRuta
+        nombre.text = ruta.getNombreRuta()
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,7 +36,7 @@ class RutaDetalleViewController: UIViewController {
     
     @IBAction func compartir(_ sender: Any) {
         
-        let texto="¡Estoy en la parada Miranda!. Sigue mi ruta en:"
+        let texto="¡Estoy en la parada " + parada.nombreParada + "!. Sigue mi ruta en:"
         let liga="http://199.233.252.86/201713/printf/rutas.json"
         if let imagen2:UIImage=UIImage(named:"shareImage")!
         {
@@ -42,6 +48,19 @@ class RutaDetalleViewController: UIViewController {
             self.present(actividad,animated:true, completion:nil)
         }
         
+    }
+    
+    
+
+    
+    
+    
+    
+    func setRuta (ruta: ObjectRutas) {
+        self.auxRuta = ruta
+    }
+    func setParada (parada:ObjectParada) {
+        self.parada = parada
     }
 
 }

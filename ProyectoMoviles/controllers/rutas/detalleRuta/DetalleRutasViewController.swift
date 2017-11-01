@@ -58,15 +58,19 @@ class DetalleRutasViewController: UIViewController,UITableViewDataSource, UITabl
     }
     
     override func prepare (for segue: UIStoryboardSegue, sender: Any?) {
-        var sigVista:Any
+        
         
         if segue.identifier == "perfil" {
-            sigVista=segue.destination as! UserViewController
+            var sigVista=segue.destination as! UserViewController
+            
         }
         if segue.identifier == "notificaciones" {
             
         }
         if segue.identifier == "detalleParada" {
+            var sigVista=segue.destination as! ParadaViewController
+            sigVista.setRuta(ruta: ruta)
+            sigVista.setParada(parada: ruta.getParadasDeRuta()[tableView.indexPathForSelectedRow!.row])
             
         }
         
