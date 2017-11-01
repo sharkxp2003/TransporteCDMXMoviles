@@ -8,11 +8,12 @@
 
 import UIKit
 
-class SeleccionRutaViewController: UITableViewController, UISearchResultsUpdating  {
+class SeleccionRutaViewController:  UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating {
 
     
 
     let serverData="http://199.233.252.86/201713/printf/rutas.json"
+    let textCellIdentifier = "textCell"
     var datosFiltrados = [Any]()
     let searchController = UISearchController(searchResultsController: nil)
     var indice = 0
@@ -23,6 +24,7 @@ class SeleccionRutaViewController: UITableViewController, UISearchResultsUpdatin
     var coleccionRutasObject:[ObjectRutas] = [ObjectRutas]()
     var algo:String = "AAA"
     
+    @IBOutlet weak var tableView: UITableView!
     
     struct Direccion:Codable {
         let calle:String
@@ -79,6 +81,9 @@ class SeleccionRutaViewController: UITableViewController, UISearchResultsUpdatin
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         let url = URL(string: serverData)
         let datosJSON = try! Data(contentsOf: url!, options : [])
         rutas = try! decoder.decode(Rutas.self, from:datosJSON)
@@ -100,6 +105,7 @@ class SeleccionRutaViewController: UITableViewController, UISearchResultsUpdatin
         
         //Instalar la barra de búsqueda en la cabecera de la tabla
         tableView.tableHeaderView = searchController.searchBar
+        tableView.scrollToRow(at: NSIndexPath(row: 0, section: 0) as IndexPath, at: UITableViewScrollPosition.top, animated: false)
     }
     
     func updateSearchResults(for searchController: UISearchController) {
@@ -116,25 +122,28 @@ class SeleccionRutaViewController: UITableViewController, UISearchResultsUpdatin
         }
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // remplazar el uso de nuevoArray por datosFiltrados
         return (rutas.rutas.count)
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EntradaRuta", for: indexPath)
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath) as! SeleccionRutaCellViewController
         let ruta = rutas.rutas[indexPath.row]
-        cell.textLabel?.text = "     "+ruta.ruta+" "+ruta.nombre
+      
+        cell.nombreRuta.text = ruta.nombre
+        cell.numeroRuta.text = ruta.ruta
         
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         //Verificar si la vista actual es la de búsqueda
         if (self.searchController.isActive) {
