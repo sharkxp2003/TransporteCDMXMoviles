@@ -19,19 +19,9 @@ class ObjectDireccion {
     var latitud:Double
     var longitud:Double
     
-    init(direccion : SeleccionRutaViewController.Direccion) {
-        
-        self.calle = direccion.calle
-        self.colonia = direccion.colonia
-        self.delegacion = direccion.delegacion
-        self.ciudad = direccion.ciudad
-        self.cp = direccion.cp
-        self.latitud = direccion.latitud
-        self.longitud = direccion.longitud
-        
-    }
+
     
-    init(direccion : DetalleRutasViewController.Direccion) {
+    init(direccion : JsonParser.Direccion) {
         self.calle = direccion.calle
         self.colonia = direccion.colonia
         self.delegacion = direccion.delegacion

@@ -16,14 +16,9 @@ class ObjectRutas {
     var nombre:String
     var paradas:[ObjectParada]
     
-    init(ruta: DetalleRutasViewController.Ruta, paradas: [ObjectParada]) {
-        id = ruta.id
-        self.ruta = ruta.ruta
-        nombre = ruta.nombre
-        self.paradas = paradas
-    }
+
     
-    init(ruta: SeleccionRutaViewController.Ruta, paradas: [ObjectParada]) {
+    init(ruta: JsonParser.Ruta, paradas: [ObjectParada]) {
         id = ruta.id
         self.ruta = ruta.ruta
         nombre = ruta.nombre

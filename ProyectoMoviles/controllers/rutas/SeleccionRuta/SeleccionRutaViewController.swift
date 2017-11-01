@@ -17,78 +17,22 @@ class SeleccionRutaViewController:  UIViewController, UITableViewDataSource, UIT
     var datosFiltrados = [Any]()
     let searchController = UISearchController(searchResultsController: nil)
     var indice = 0
-    //var objetoRuta = [String:Any]()
     var nombreRuta = String()
-    let decoder = JSONDecoder()
-    var rutas:Rutas!
     var coleccionRutasObject:[ObjectRutas] = [ObjectRutas]()
     var algo:String = "AAA"
+    var jsonParser:JsonParser!
     
     @IBOutlet weak var tableView: UITableView!
     
-    struct Direccion:Codable {
-        let calle:String
-        let colonia:String
-        let delegacion:String
-        let ciudad:String
-        let cp:String
-        let latitud:Double
-        let longitud:Double
-    }
-    
-    struct Parada:Codable {
-        let id:Int
-        let linea:String
-        let inicio:String
-        let nombreParada:String
-        let noAutobus:String
-        let direccion:Direccion
-        let capacidadMax:Int
-        
-    }
-    
-    struct Ruta:Codable {
-        let id:Int
-        let ruta:String
-        let nombre:String
-        let paradas:[Parada]
-    }
-    
-    struct Rutas:Codable {
-        let rutas:[Ruta]
-    }
-    
-    func jsonToObject (rutas: Rutas) -> [ObjectRutas] {
-        var coleccionRutas:[ObjectRutas] = [ObjectRutas]()
-        for ruta in rutas.rutas {
-            var objRuta:ObjectRutas
-            var objParada:ObjectParada
-            var coleccionParadas:[ObjectParada] = [ObjectParada]()
-            for parada in ruta.paradas {
-                var objDireccion:ObjectDireccion
-                objDireccion = ObjectDireccion(direccion:parada.direccion)
-                objParada = ObjectParada(parada: parada, direccion:objDireccion)
-                coleccionParadas.append(objParada)
-            }
-            objRuta = ObjectRutas(ruta: ruta, paradas: coleccionParadas)
-            coleccionRutas.append(objRuta)
-        }
-        return coleccionRutas
-    }
-    
-    
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
+        jsonParser = JsonParser(serverData: serverData)
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        let url = URL(string: serverData)
-        let datosJSON = try! Data(contentsOf: url!, options : [])
-        rutas = try! decoder.decode(Rutas.self, from:datosJSON)
-        
-        coleccionRutasObject = jsonToObject(rutas: rutas)
+
+        coleccionRutasObject = jsonParser.rutasJsonToObject()
         
         
         //usar la vista actual para presentar los resultados de la búsqueda
@@ -111,9 +55,9 @@ class SeleccionRutaViewController:  UIViewController, UITableViewDataSource, UIT
     func updateSearchResults(for searchController: UISearchController) {
         
         if searchController.searchBar.text! == "" {
-            datosFiltrados = rutas.rutas;
+            datosFiltrados = coleccionRutasObject;
         } else {
-            datosFiltrados = rutas.rutas.filter {
+            datosFiltrados = coleccionRutasObject.filter {
                 let nombreRuta=$0.nombre;
                 return(nombreRuta.lowercased().contains(searchController.searchBar.text!.lowercased()))
             }
@@ -129,12 +73,12 @@ class SeleccionRutaViewController:  UIViewController, UITableViewDataSource, UIT
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // remplazar el uso de nuevoArray por datosFiltrados
-        return (rutas.rutas.count)
+        return (coleccionRutasObject.count)
     }
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath) as! SeleccionRutaCellViewController
-        let ruta = rutas.rutas[indexPath.row]
+        let ruta = coleccionRutasObject[indexPath.row]
       
         cell.nombreRuta.text = ruta.nombre
         cell.numeroRuta.text = ruta.ruta
@@ -144,30 +88,14 @@ class SeleccionRutaViewController:  UIViewController, UITableViewDataSource, UIT
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        //Verificar si la vista actual es la de búsqueda
-        if (self.searchController.isActive) {
-            indice = indexPath.row
-
-        }
-            //sino utilizar la vista sin filtro
-        else {
-            indice = indexPath.row
-            //objetoRuta = datosFiltrados[indice]
-        }
+        indice = indexPath.row
     }
     
     override func prepare (for segue: UIStoryboardSegue, sender: Any?) {
         let sigVista=segue.destination as! DetalleRutasViewController
-        //let nombre:String = rutas.rutas[tableView.indexPathForSelectedRow!.row].nombre
-        
-        print(coleccionRutasObject[tableView.indexPathForSelectedRow!.row].getNombreRuta());
-        print(indice)
         sigVista.setRuta(objectRuta: coleccionRutasObject[tableView.indexPathForSelectedRow!.row])
     }
     
-    
-
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -12,6 +12,22 @@ class RutaDetalleViewController: UIViewController {
 
     @IBOutlet weak var nombre: UILabel!
     var name:String = "Balderas"
+   
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        nombre.text = name
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+    
     @IBAction func compartir(_ sender: Any) {
         
         let texto="¡Estoy en la parada Miranda!. Sigue mi ruta en:"
@@ -25,17 +41,7 @@ class RutaDetalleViewController: UIViewController {
             actividad.excludedActivityTypes=[UIActivityType.mail]
             self.present(actividad,animated:true, completion:nil)
         }
-    
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        nombre.text = name
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
 
 }

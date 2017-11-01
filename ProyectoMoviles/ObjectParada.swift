@@ -21,17 +21,8 @@ class ObjectParada {
     
     
     
-    init(parada : DetalleRutasViewController.Parada, direccion: ObjectDireccion) {
-        id = parada.id
-        linea = parada.linea
-        inicio = parada.inicio
-        nombreParada = parada.nombreParada
-        noAutobus = parada.noAutobus
-        capacidadMaxima = parada.capacidadMax
-        self.direccion = direccion
-    }
     
-    init(parada : SeleccionRutaViewController.Parada, direccion: ObjectDireccion) {
+    init(parada : JsonParser.Parada, direccion: ObjectDireccion) {
         id = parada.id
         linea = parada.linea
         inicio = parada.inicio
@@ -40,6 +31,7 @@ class ObjectParada {
         capacidadMaxima = parada.capacidadMax
         self.direccion = direccion
     }
+ 
     
     
     
