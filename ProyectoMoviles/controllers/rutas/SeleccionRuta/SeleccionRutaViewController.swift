@@ -80,7 +80,7 @@ class SeleccionRutaViewController:  UIViewController, UITableViewDataSource, UIT
         let cell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath) as! SeleccionRutaCellViewController
         let ruta = coleccionRutasObject[indexPath.row]
       
-        cell.nombreRuta.text = ruta.nombre
+        cell.nombreRuta.text = ruta.getNombreRuta()
         cell.numeroRuta.text = ruta.ruta
         
         return cell
@@ -92,8 +92,10 @@ class SeleccionRutaViewController:  UIViewController, UITableViewDataSource, UIT
     }
     
     override func prepare (for segue: UIStoryboardSegue, sender: Any?) {
-        let sigVista=segue.destination as! DetalleRutasViewController
-        sigVista.setRuta(objectRuta: coleccionRutasObject[tableView.indexPathForSelectedRow!.row])
+        //let sigVista=segue.destination as! DetalleRutasViewController
+        let sigVistaAux = segue.destination as! UITabBarController
+        let nav = sigVistaAux.viewControllers![0] as! DetalleRutasViewController
+        nav.setRuta(objectRuta: coleccionRutasObject[tableView.indexPathForSelectedRow!.row])
     }
     
 

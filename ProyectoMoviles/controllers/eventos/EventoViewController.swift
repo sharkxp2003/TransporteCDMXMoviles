@@ -8,57 +8,67 @@
 
 import UIKit
 
-class EventoViewController: UIViewController {
+class EventoViewController: UIViewController,UITableViewDataSource, UITableViewDelegate  {
     
-    @IBOutlet weak var hrCul: UILabel!
-    @IBOutlet weak var motCul: UILabel!
+
+    let textCellIdentifier = "cellText"
+    let serverData="http://199.233.252.86/201713/printf/envetos2.json"
+    var jsonParser:JsonParser!
+    var eventos:[ObjectEvento]!
+    var dictionary:[String:ObjectEvento]! = [:]
+    var sectionsNameVector:[String]!
     
-    @IBOutlet weak var hrSoc: UILabel!
-    @IBOutlet weak var motSOc: UILabel!
-    
-    @IBOutlet weak var hrDep: UILabel!
-    @IBOutlet weak var motDep: UILabel!
-    
-    let serverData="http://199.233.252.86/201713/printf/controlador.json"
-    
-    var dataArray:[String: AnyObject]?
-    
-    // funcion que convierte de JSON a Array
-    func JSONParseArray(_ string: String) -> [AnyObject]{
-        if let data = string.data(using: String.Encoding.utf8){
-            do{
-                if let array = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers)  as? [AnyObject] {
-                    return array
-                }
-            }catch{
-                print("error")
-            }
-        }
-        return [AnyObject]()
-    }
-    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        jsonParser = JsonParser(serverData: serverData)
+        eventos = jsonParser.eventosJsonToObject()
         
-        let url = URL(string: serverData)
-        let datosJSON = try? Data(contentsOf: url!)
-        dataArray = try! JSONSerialization.jsonObject(with: datosJSON!) as? [String: AnyObject]
+        dictionary = ["Culturales" : eventos[0], "Sociales" : eventos[1], "Deportivos" : eventos[2]]
+        sectionsNameVector = ["Culturales","Sociales","Deportivos"]
         
-        
-        let nombre = dataArray!["nombre"] as! String
-        let apellidos = dataArray!["apellidos"] as! String
-        let ineData = dataArray!["INE"] as! String
-        let noControlador = dataArray!["noControlador"] as! String
-        let fecha = dataArray!["fechaNacimiento"] as! String
-        
-        hrCul.text = nombre;
-        
+        tableView.delegate = self
+        tableView.dataSource = self
     }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return dictionary.count
+    }
+    
+    func tableView(_ tableView: UITableView,titleForHeaderInSection section: Int) -> String? {
+        switch(section) {
+        case 0: return "Culturales"
+        case 1: return "Sociales"
+        case 2: return "Deportivos"
+        default :return ""
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch(section) {
+        case 0: return dictionary["Culturales"]!.coleccionDetalleEventos.count
+        case 1: return dictionary["Sociales"]!.coleccionDetalleEventos.count
+        case 2: return dictionary["Deportivos"]!.coleccionDetalleEventos.count
+        default : return 0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath) as! EventoCellViewController
+        let evento = self.eventos[indexPath.section]
+        let detalleEvento = evento.coleccionDetalleEventos[indexPath.row]
+        
+        cell.hora.text = detalleEvento.hora
+        cell.motivo.text = detalleEvento.motivo
+    
+
+        return cell
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 }

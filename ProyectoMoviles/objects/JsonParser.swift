@@ -15,6 +15,23 @@ class JsonParser {
     let serverData:String
     
     
+    struct DetalleEvento:Codable {
+        let id:Int
+        let hora:String
+        let motivo:String
+    }
+    
+    
+    struct Evento:Codable {
+        let id:Int
+        let tipo:String
+        let eventos:[DetalleEvento]
+        
+    }
+    
+    struct Eventos:Codable {
+        let eventos:[Evento]
+    }
     
     struct Direccion:Codable {
         let calle:String
@@ -41,6 +58,8 @@ class JsonParser {
         let id:Int
         let ruta:String
         let nombre:String
+        let inicio:String
+        let fin:String
         let paradas:[Parada]
     }
     
@@ -99,5 +118,34 @@ class JsonParser {
         objDireccion = ObjectDireccion(direccion: direccion)
         return objDireccion
     }
+    
+    func eventosJsonToObject() -> [ObjectEvento] {
+        let url = URL(string: serverData)
+        let datosJSON = try! Data(contentsOf: url!, options : [])
+        let eventos = try! decoder.decode([Evento], from:datosJSON)
+        var coleccionEventos:[ObjectEvento] = [ObjectEvento]()
+        
+        for evento in eventos {
+            var objEvento:ObjectEvento
+            var coleccionDetalleObjEvento:[ObjectDetalleEvento] = [ObjectDetalleEvento]()
+            for detalleEvento  in evento.eventos {
+                var objDetalleEvento:ObjectDetalleEvento
+                objDetalleEvento = ObjectDetalleEvento(detalleEvento : detalleEvento)
+                coleccionDetalleObjEvento.append(objDetalleEvento)
+            }
+            objEvento = ObjectEvento(evento : evento, detalleEvento: coleccionDetalleObjEvento)
+            coleccionEventos.append(objEvento)
+        }
+        
+        return coleccionEventos
+        
+        
+    }
+        
+        
+        
+        
+
+    
     
 }

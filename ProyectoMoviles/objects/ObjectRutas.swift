@@ -15,6 +15,8 @@ class ObjectRutas {
     var ruta:String
     var nombre:String
     var paradas:[ObjectParada]
+    var inicio:String
+    var fin:String
     
 
     
@@ -23,6 +25,8 @@ class ObjectRutas {
         self.ruta = ruta.ruta
         nombre = ruta.nombre
         self.paradas = paradas
+        self.inicio = ruta.inicio
+        self.fin = ruta.fin
     }
     
     func getRuta() -> String {
@@ -31,6 +35,15 @@ class ObjectRutas {
     
     func getNombreRuta() -> String {
         return nombre
+    }
+    
+    func getInicioRuta() -> String {
+        return inicio
+    }
+    
+    func getFinRuta() -> String {
+        return fin
+        
     }
     
     func getIdRuta() -> Int {

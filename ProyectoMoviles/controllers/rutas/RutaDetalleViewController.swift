@@ -18,6 +18,8 @@ class RutaDetalleViewController: UIViewController {
     var parada:ObjectParada!
     var jsonParser:JsonParser!
    
+    @IBOutlet weak var rutaInicio: UILabel!
+    @IBOutlet weak var rutaFin: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,8 @@ class RutaDetalleViewController: UIViewController {
         jsonParser = JsonParser(serverData: serverData)
         ruta = auxRuta == nil ? jsonParser.rutaJsonToObject() : auxRuta
         nombre.text = ruta.getNombreRuta()
+        rutaInicio.text = ruta.getInicioRuta()
+        rutaFin.text = ruta.getFinRuta()
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,7 +40,7 @@ class RutaDetalleViewController: UIViewController {
     
     @IBAction func compartir(_ sender: Any) {
         
-        let texto="¡Estoy en la parada " + parada.nombreParada + "!. Sigue mi ruta en:"
+        let texto="¡Estoy en la ruta " + ruta.getNombreRuta() + "!. Sigue mi ruta en:"
         let liga="http://199.233.252.86/201713/printf/rutas.json"
         if let imagen2:UIImage=UIImage(named:"shareImage")!
         {

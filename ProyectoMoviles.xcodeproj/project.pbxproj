@@ -20,12 +20,15 @@
 		FA5979061F69D75C007F7C82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5979041F69D75C007F7C82 /* Main.storyboard */; };
 		FA5979081F69D75C007F7C82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5979071F69D75C007F7C82 /* Assets.xcassets */; };
 		FA59790B1F69D75C007F7C82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5979091F69D75C007F7C82 /* LaunchScreen.storyboard */; };
+		FA7193B91FAA96B0000129DB /* EventoCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7193B81FAA96B0000129DB /* EventoCellViewController.swift */; };
 		FA74D7241FAA510D00CB074C /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = FA74D7231FAA510D00CB074C /* art.scnassets */; };
 		FAB0EE661FA789EB006FC5D1 /* SeleccionRutaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0EE651FA789EB006FC5D1 /* SeleccionRutaViewController.swift */; };
 		FAB0EE681FA7926D006FC5D1 /* ObjectRutas.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0EE671FA7926D006FC5D1 /* ObjectRutas.swift */; };
 		FAB0EE6A1FA79CC5006FC5D1 /* ObjectParada.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0EE691FA79CC5006FC5D1 /* ObjectParada.swift */; };
 		FAB0EE6C1FA79D0A006FC5D1 /* ObjectDireccion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0EE6B1FA79D0A006FC5D1 /* ObjectDireccion.swift */; };
 		FACACA821FAA697700598AF0 /* ParadaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACACA811FAA697700598AF0 /* ParadaViewController.swift */; };
+		FACACA841FAA8E2800598AF0 /* ObjectEvento.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACACA831FAA8E2800598AF0 /* ObjectEvento.swift */; };
+		FACACA861FAA8E9C00598AF0 /* ObjectDetalleEvento.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACACA851FAA8E9C00598AF0 /* ObjectDetalleEvento.swift */; };
 		FAE3FA1F1FAA3EBE002E0682 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE3FA1E1FAA3EBE002E0682 /* ARViewController.swift */; };
 		FAEA23111FA9A49200687C0C /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA23101FA9A49200687C0C /* JsonParser.swift */; };
 /* End PBXBuildFile section */
@@ -46,12 +49,15 @@
 		FA5979071F69D75C007F7C82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA59790A1F69D75C007F7C82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA59790C1F69D75C007F7C82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA7193B81FAA96B0000129DB /* EventoCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoCellViewController.swift; sourceTree = "<group>"; };
 		FA74D7231FAA510D00CB074C /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		FAB0EE651FA789EB006FC5D1 /* SeleccionRutaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeleccionRutaViewController.swift; sourceTree = "<group>"; };
 		FAB0EE671FA7926D006FC5D1 /* ObjectRutas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectRutas.swift; sourceTree = "<group>"; };
 		FAB0EE691FA79CC5006FC5D1 /* ObjectParada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectParada.swift; sourceTree = "<group>"; };
 		FAB0EE6B1FA79D0A006FC5D1 /* ObjectDireccion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDireccion.swift; sourceTree = "<group>"; };
 		FACACA811FAA697700598AF0 /* ParadaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParadaViewController.swift; sourceTree = "<group>"; };
+		FACACA831FAA8E2800598AF0 /* ObjectEvento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectEvento.swift; sourceTree = "<group>"; };
+		FACACA851FAA8E9C00598AF0 /* ObjectDetalleEvento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetalleEvento.swift; sourceTree = "<group>"; };
 		FAE3FA1E1FAA3EBE002E0682 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		FAEA23101FA9A49200687C0C /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,8 +110,6 @@
 		FA5978FF1F69D75C007F7C82 /* ProyectoMoviles */ = {
 			isa = PBXGroup;
 			children = (
-				FACACA801FAA696300598AF0 /* paradas */,
-				FAE3FA1D1FAA3E68002E0682 /* AR */,
 				FAE3FA1C1FAA3B39002E0682 /* objects */,
 				FA84170B1FA71A5500799128 /* controllers */,
 				FA5979001F69D75C007F7C82 /* AppDelegate.swift */,
@@ -122,6 +126,8 @@
 		FA84170B1FA71A5500799128 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FAE3FA1D1FAA3E68002E0682 /* AR */,
+				FACACA801FAA696300598AF0 /* paradas */,
 				FA84170F1FA71AB600799128 /* eventos */,
 				FA84170E1FA71A9B00799128 /* notificaciones */,
 				FA84170D1FA71A9100799128 /* rutas */,
@@ -160,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				BF0784A71FA6DCC2001BF4C4 /* EventoViewController.swift */,
+				FA7193B81FAA96B0000129DB /* EventoCellViewController.swift */,
 			);
 			path = eventos;
 			sourceTree = "<group>";
@@ -176,6 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				FAEA23101FA9A49200687C0C /* JsonParser.swift */,
+				FACACA851FAA8E9C00598AF0 /* ObjectDetalleEvento.swift */,
+				FACACA831FAA8E2800598AF0 /* ObjectEvento.swift */,
 				FAB0EE6B1FA79D0A006FC5D1 /* ObjectDireccion.swift */,
 				FAB0EE671FA7926D006FC5D1 /* ObjectRutas.swift */,
 				FAB0EE691FA79CC5006FC5D1 /* ObjectParada.swift */,
@@ -273,9 +282,12 @@
 				FAB0EE6C1FA79D0A006FC5D1 /* ObjectDireccion.swift in Sources */,
 				FAB0EE6A1FA79CC5006FC5D1 /* ObjectParada.swift in Sources */,
 				FAB0EE681FA7926D006FC5D1 /* ObjectRutas.swift in Sources */,
+				FACACA841FAA8E2800598AF0 /* ObjectEvento.swift in Sources */,
 				BF59C9621FA6B1D3005823C4 /* NotificationViewController.swift in Sources */,
+				FA7193B91FAA96B0000129DB /* EventoCellViewController.swift in Sources */,
 				FAB0EE661FA789EB006FC5D1 /* SeleccionRutaViewController.swift in Sources */,
 				FA171FA41FA9994F00D96270 /* DetalleRutasCellViewController.swift in Sources */,
+				FACACA861FAA8E9C00598AF0 /* ObjectDetalleEvento.swift in Sources */,
 				FA5979031F69D75C007F7C82 /* ViewController.swift in Sources */,
 				BF0784A81FA6DCC2001BF4C4 /* EventoViewController.swift in Sources */,
 				FAEA23111FA9A49200687C0C /* JsonParser.swift in Sources */,
