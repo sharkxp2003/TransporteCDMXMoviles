@@ -454,6 +454,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AX8-yp-Tuu">
+                                <rect key="frame" x="195" y="601" width="65" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Ver mapa"/>
+                                <connections>
+                                    <segue destination="6ff-mH-7tc" kind="show" id="OQN-gJ-1ZR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -469,11 +477,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JLG-aU-gpx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="ncs-vZ-sSQ">
-                    <connections>
-                        <segue destination="6ff-mH-7tc" kind="show" id="rPY-Iw-zax"/>
-                    </connections>
-                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="ncs-vZ-sSQ"/>
             </objects>
             <point key="canvasLocation" x="884" y="4009.745127436282"/>
         </scene>
@@ -1622,8 +1626,9 @@
         <image name="warning" width="185" height="163"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UCW-67-4Ij"/>
-        <segue reference="np9-Bn-n0U"/>
+        <segue reference="eFw-2d-O3v"/>
+        <segue reference="TKd-6N-KdE"/>
+        <segue reference="T8g-hQ-S5w"/>
         <segue reference="hBL-5R-zMg"/>
         <segue reference="5Ae-Ha-6Ko"/>
         <segue reference="bJE-9F-IhE"/>
