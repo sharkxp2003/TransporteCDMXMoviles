@@ -24,7 +24,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.requestWhenInUseAuthorization()
         
         
-        map.mapType=MKMapType.standard
+    /*    map.mapType=MKMapType.standard
         let cl=CLLocationCoordinate2DMake(19.283996, -99.136006)
         map.region=MKCoordinateRegionMakeWithDistance(cl, 2000, 2000)
         /* //esta es otra forma de definir la región de un mapa
@@ -47,7 +47,21 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         map.showsCompass=true
         map.showsScale=true
         map.showsTraffic=true
-        map.isZoomEnabled=true
+        map.isZoomEnabled=true */
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations[0]
+        
+        //zoom
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
+        
+        let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+        let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
+        
+        map.setRegion(region, animated: true)
+        
+        self.map.showsUserLocation = true
     }
     
     func locationManager(_ manager: CLLocationManager,
