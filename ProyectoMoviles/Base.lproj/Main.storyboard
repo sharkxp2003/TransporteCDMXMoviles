@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -1388,10 +1388,10 @@
             </objects>
             <point key="canvasLocation" x="485.60000000000002" y="4853.5232383808097"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="Shd-bb-qTY">
             <objects>
-                <viewController id="6ff-mH-7tc" sceneMemberID="viewController">
+                <viewController id="6ff-mH-7tc" customClass="MapViewController" customModule="ProyectoMoviles" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3ga-eq-O7u"/>
                         <viewControllerLayoutGuide type="bottom" id="F6M-Ya-WPh"/>
@@ -1466,6 +1466,9 @@
                             <outletCollection property="gestureRecognizers" destination="k1o-Xg-B6X" appends="YES" id="6DE-rX-WsD"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="map" destination="Umi-he-kFo" id="b5y-Ug-bOm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HaY-vS-bcw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="k1o-Xg-B6X">
@@ -1626,7 +1629,6 @@
         <image name="warning" width="185" height="163"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eFw-2d-O3v"/>
         <segue reference="TKd-6N-KdE"/>
         <segue reference="T8g-hQ-S5w"/>
         <segue reference="hBL-5R-zMg"/>

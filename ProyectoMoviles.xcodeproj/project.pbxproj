@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BF0784A81FA6DCC2001BF4C4 /* EventoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0784A71FA6DCC2001BF4C4 /* EventoViewController.swift */; };
 		BF0784AA1FA6F030001BF4C4 /* RutaDetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0784A91FA6F030001BF4C4 /* RutaDetalleViewController.swift */; };
+		BF0A29EC1FCA145A00D25064 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A29EB1FCA145A00D25064 /* MapViewController.swift */; };
 		BF59C9621FA6B1D3005823C4 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59C9611FA6B1D3005823C4 /* NotificationViewController.swift */; };
 		BFC9CA7C1FA5A756006410D2 /* DetalleRutasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC9CA7B1FA5A756006410D2 /* DetalleRutasViewController.swift */; };
 		BFC9CA7E1FA69E02006410D2 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC9CA7D1FA69E02006410D2 /* UserViewController.swift */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		BF0784A71FA6DCC2001BF4C4 /* EventoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoViewController.swift; sourceTree = "<group>"; };
 		BF0784A91FA6F030001BF4C4 /* RutaDetalleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutaDetalleViewController.swift; sourceTree = "<group>"; };
+		BF0A29EB1FCA145A00D25064 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BF59C9611FA6B1D3005823C4 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		BFC9CA7B1FA5A756006410D2 /* DetalleRutasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleRutasViewController.swift; sourceTree = "<group>"; };
 		BFC9CA7D1FA69E02006410D2 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF0A29EA1FCA143600D25064 /* maps */ = {
+			isa = PBXGroup;
+			children = (
+				BF0A29EB1FCA145A00D25064 /* MapViewController.swift */,
+			);
+			path = maps;
+			sourceTree = "<group>";
+		};
 		FA171F9F1FA97F6300D96270 /* SeleccionRuta */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +157,7 @@
 		FA84170D1FA71A9100799128 /* rutas */ = {
 			isa = PBXGroup;
 			children = (
+				BF0A29EA1FCA143600D25064 /* maps */,
 				FA171FA21FA9990A00D96270 /* detalleRuta */,
 				FA171F9F1FA97F6300D96270 /* SeleccionRuta */,
 				BF0784A91FA6F030001BF4C4 /* RutaDetalleViewController.swift */,
@@ -288,6 +299,7 @@
 				FAB0EE661FA789EB006FC5D1 /* SeleccionRutaViewController.swift in Sources */,
 				FA171FA41FA9994F00D96270 /* DetalleRutasCellViewController.swift in Sources */,
 				FACACA861FAA8E9C00598AF0 /* ObjectDetalleEvento.swift in Sources */,
+				BF0A29EC1FCA145A00D25064 /* MapViewController.swift in Sources */,
 				FA5979031F69D75C007F7C82 /* ViewController.swift in Sources */,
 				BF0784A81FA6DCC2001BF4C4 /* EventoViewController.swift in Sources */,
 				FAEA23111FA9A49200687C0C /* JsonParser.swift in Sources */,
