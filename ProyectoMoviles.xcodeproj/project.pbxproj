@@ -51,6 +51,16 @@
 		FA5979071F69D75C007F7C82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA59790A1F69D75C007F7C82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA59790C1F69D75C007F7C82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA6685731FCB58ED000A0D51 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
+		FA6685741FCB58ED000A0D51 /* CLLocation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extensions.swift"; sourceTree = "<group>"; };
+		FA6685751FCB58ED000A0D51 /* FloatingPoint+Radians.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FloatingPoint+Radians.swift"; sourceTree = "<group>"; };
+		FA6685761FCB58ED000A0D51 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		FA6685771FCB58ED000A0D51 /* LocationNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNode.swift; sourceTree = "<group>"; };
+		FA6685781FCB58ED000A0D51 /* SceneLocationEstimate+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneLocationEstimate+Extensions.swift"; sourceTree = "<group>"; };
+		FA6685791FCB58ED000A0D51 /* SceneLocationEstimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneLocationEstimate.swift; sourceTree = "<group>"; };
+		FA66857A1FCB58ED000A0D51 /* SceneLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneLocationView.swift; sourceTree = "<group>"; };
+		FA66857B1FCB58ED000A0D51 /* SCNNode+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNNode+Extensions.swift"; sourceTree = "<group>"; };
+		FA66857C1FCB58ED000A0D51 /* SCNVector3+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Extensions.swift"; sourceTree = "<group>"; };
 		FA7193B81FAA96B0000129DB /* EventoCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoCellViewController.swift; sourceTree = "<group>"; };
 		FA74D7231FAA510D00CB074C /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		FAB0EE651FA789EB006FC5D1 /* SeleccionRutaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeleccionRutaViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +130,7 @@
 		FA5978FF1F69D75C007F7C82 /* ProyectoMoviles */ = {
 			isa = PBXGroup;
 			children = (
+				FA6685721FCB58ED000A0D51 /* ARCL2 */,
 				FAE3FA1C1FAA3B39002E0682 /* objects */,
 				FA84170B1FA71A5500799128 /* controllers */,
 				FA5979001F69D75C007F7C82 /* AppDelegate.swift */,
@@ -131,6 +142,24 @@
 				EA057F2D1F6A151500B5E52F /* WelcomeViewController.swift */,
 			);
 			path = ProyectoMoviles;
+			sourceTree = "<group>";
+		};
+		FA6685721FCB58ED000A0D51 /* ARCL2 */ = {
+			isa = PBXGroup;
+			children = (
+				FA6685731FCB58ED000A0D51 /* CGPoint+Extensions.swift */,
+				FA6685741FCB58ED000A0D51 /* CLLocation+Extensions.swift */,
+				FA6685751FCB58ED000A0D51 /* FloatingPoint+Radians.swift */,
+				FA6685761FCB58ED000A0D51 /* LocationManager.swift */,
+				FA6685771FCB58ED000A0D51 /* LocationNode.swift */,
+				FA6685781FCB58ED000A0D51 /* SceneLocationEstimate+Extensions.swift */,
+				FA6685791FCB58ED000A0D51 /* SceneLocationEstimate.swift */,
+				FA66857A1FCB58ED000A0D51 /* SceneLocationView.swift */,
+				FA66857B1FCB58ED000A0D51 /* SCNNode+Extensions.swift */,
+				FA66857C1FCB58ED000A0D51 /* SCNVector3+Extensions.swift */,
+			);
+			name = ARCL2;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		FA84170B1FA71A5500799128 /* controllers */ = {
