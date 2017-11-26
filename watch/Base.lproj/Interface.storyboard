@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13507"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="watch" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="37" alignment="left" id="cbc-5r-Kip">
+                            <items>
+                                <label height="38" alignment="left" text="Ruta:" textAlignment="right" id="UYU-Uw-moc"/>
+                                <label width="82" height="39" alignment="left" text="Santa Fe" textAlignment="center" id="VSw-Dn-QoP"/>
+                            </items>
+                            <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </group>
+                        <separator width="1" alignment="left" id="zlj-nu-AZK">
+                            <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </separator>
+                        <group width="1" alignment="left" id="yb8-mJ-Qwp">
+                            <items>
+                                <label alignment="left" text="N bus:" id="8hO-VD-eAe"/>
+                                <label width="85" alignment="left" text="25" textAlignment="right" id="yqt-JE-n7E"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="Tpc-hA-ZVn">
+                            <items>
+                                <label alignment="left" text="Parada:" id="fq4-Aa-dQ3"/>
+                                <label width="75" alignment="left" text="P1" textAlignment="right" id="ih3-Nt-ZoO"/>
+                            </items>
+                        </group>
+                        <group width="136" alignment="left" id="dr4-7w-Kmz">
+                            <items>
+                                <label width="89" alignment="left" text="Distancia:" textAlignment="left" id="fXz-lm-QBj"/>
+                                <label alignment="left" text="0 Km" id="KKa-GT-YIL"/>
+                            </items>
+                        </group>
+                        <group width="136" alignment="left" id="r05-xK-rw8">
+                            <items>
+                                <label width="77" alignment="left" text="Tiempo:" id="AjN-7D-62k"/>
+                                <label width="55" alignment="left" text="3 min" textAlignment="right" id="pH1-Oy-WW0"/>
+                            </items>
+                        </group>
+                        <group width="136" alignment="left" id="eEA-5m-HwW">
+                            <items>
+                                <label width="86" alignment="left" text="Ocupacion:" id="Imf-sQ-nag"/>
+                                <label width="47" alignment="left" text="30%" textAlignment="right" id="3Wy-Ew-Ozb"/>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="34" y="29.5"/>
+        </scene>
+    </scenes>
+</document>
