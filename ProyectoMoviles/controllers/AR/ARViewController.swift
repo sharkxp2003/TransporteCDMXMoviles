@@ -13,15 +13,22 @@ import CoreLocation
 import MapKit
 
 
+
+
+
+
 class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     var ruta:ObjectRutas!
     let locationManager = CLLocationManager()
     
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.distanceFilter = 1000.0
