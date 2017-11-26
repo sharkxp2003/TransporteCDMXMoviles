@@ -54,6 +54,7 @@ class UserViewController: UIViewController {
         ineLabel.text = ineData
         fechaNac.text = fecha
         idControlador.text = noControlador
+     
    
     }
 
