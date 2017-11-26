@@ -71,6 +71,10 @@ class DetalleRutasViewController: UIViewController,UITableViewDataSource, UITabl
             var sigVista=segue.destination as! ParadaViewController
             sigVista.setRuta(ruta: ruta)
             sigVista.setParada(parada: ruta.getParadasDeRuta()[tableView.indexPathForSelectedRow!.row])
+        }
+        if segue.identifier == "ARControllerSegue" {
+            var sigVista = segue.destination as! ARViewController
+            
             
         }
         

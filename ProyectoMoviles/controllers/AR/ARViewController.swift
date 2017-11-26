@@ -9,25 +9,49 @@
 import UIKit
 import SceneKit
 import ARKit
+import CoreLocation
+import MapKit
 
-class ARViewController: UIViewController, ARSCNViewDelegate {
+
+class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
+    var ruta:ObjectRutas!
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+ 
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.distanceFilter = 1000.0
+        locationManager.requestWhenInUseAuthorization()
+        
         
         // Set the view's delegate
         sceneView.delegate = self
-        
-        // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
         
-        // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        
-        // Set the scene to the view
+
+        let scene = SCNScene()
+        let position = SCNVector3Make(0, -0.3,-1.5)
+        let textPos = textFunc(position: position)
+        scene.rootNode.addChildNode(textPos)
         sceneView.scene = scene
+        
+    }
+    
+    func textFunc (position: SCNVector3) -> SCNNode {
+        let text = SCNText (string: "Info", extrusionDepth : 0)
+        text.firstMaterial?.diffuse.contents = UIColor.white
+        text.font = UIFont(name: "Helvetica", size: 0.2)
+        let textNode = SCNNode.init(geometry : text)
+        
+        return textNode
+    }
+    
+    func showMarker () {
+        let placeMark = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: ruta.getParadasDeRuta()[0].direccion.latitud, longitude: ruta.getParadasDeRuta()[0].direccion.longitud))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,4 +101,11 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
         
     }
+    
+    
+    func setRuta(ruta : ObjectRutas) {
+        self.ruta = ruta
+    }
+    
+    
 }
