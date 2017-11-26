@@ -14,50 +14,66 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="watch" customModuleProvider="target">
                     <items>
-                        <group width="1" height="37" alignment="left" id="cbc-5r-Kip">
-                            <items>
-                                <label height="38" alignment="left" text="Ruta:" textAlignment="right" id="UYU-Uw-moc"/>
-                                <label width="82" height="39" alignment="left" text="Santa Fe" textAlignment="center" id="VSw-Dn-QoP"/>
-                            </items>
+                        <button width="1" height="45" alignment="left" title="Inicio" id="KHv-dL-Ej3">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </group>
-                        <separator width="1" alignment="left" id="zlj-nu-AZK">
-                            <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </separator>
-                        <group width="1" alignment="left" id="yb8-mJ-Qwp">
-                            <items>
-                                <label alignment="left" text="N bus:" id="8hO-VD-eAe"/>
-                                <label width="85" alignment="left" text="25" textAlignment="right" id="yqt-JE-n7E"/>
-                            </items>
-                        </group>
-                        <group width="1" alignment="left" id="Tpc-hA-ZVn">
-                            <items>
-                                <label alignment="left" text="Parada:" id="fq4-Aa-dQ3"/>
-                                <label width="75" alignment="left" text="P1" textAlignment="right" id="ih3-Nt-ZoO"/>
-                            </items>
-                        </group>
-                        <group width="136" alignment="left" id="dr4-7w-Kmz">
-                            <items>
-                                <label width="89" alignment="left" text="Distancia:" textAlignment="left" id="fXz-lm-QBj"/>
-                                <label alignment="left" text="0 Km" id="KKa-GT-YIL"/>
-                            </items>
-                        </group>
-                        <group width="136" alignment="left" id="r05-xK-rw8">
-                            <items>
-                                <label width="77" alignment="left" text="Tiempo:" id="AjN-7D-62k"/>
-                                <label width="55" alignment="left" text="3 min" textAlignment="right" id="pH1-Oy-WW0"/>
-                            </items>
-                        </group>
-                        <group width="136" alignment="left" id="eEA-5m-HwW">
-                            <items>
-                                <label width="86" alignment="left" text="Ocupacion:" id="Imf-sQ-nag"/>
-                                <label width="47" alignment="left" text="30%" textAlignment="right" id="3Wy-Ew-Ozb"/>
-                            </items>
-                        </group>
+                            <connections>
+                                <segue destination="Qmb-JL-4Ng" kind="push" id="Qoc-mC-V1h"/>
+                            </connections>
+                        </button>
+                        <button width="1" height="45" alignment="left" title="Rutas" id="E8A-kd-XHW">
+                            <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </button>
+                        <button width="1" alignment="left" title="Eventos" id="xS7-jQ-JTz">
+                            <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="exx-7f-UXx" kind="push" id="usJ-3s-RKe"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="34" y="29.5"/>
+            <point key="canvasLocation" x="34" y="29"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="dtq-LW-Zjf">
+            <objects>
+                <controller id="Qmb-JL-4Ng">
+                    <items>
+                        <group width="1" height="37" alignment="left" id="PA1-Nh-RTG">
+                            <items>
+                                <label height="40" alignment="left" text="Ruta:" id="OFO-y0-8VF"/>
+                                <label width="92" height="38" alignment="left" text="Santa Fe" textAlignment="right" id="k13-8B-6tT"/>
+                            </items>
+                            <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </group>
+                        <table alignment="left" id="y5b-8R-4VE">
+                            <items>
+                                <tableRow id="Ca0-pU-Ue6" customClass="ControllerGroup" customModule="ProyectoMoviles">
+                                    <group key="rootItem" width="1" alignment="left" id="fY2-GJ-WIE">
+                                        <items>
+                                            <label width="56" height="36" alignment="left" text="Nº bus:" id="1TV-Xo-bve"/>
+                                            <label width="70" height="37" alignment="left" text="resp" textAlignment="right" id="Bxh-Pa-hL4"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="lblLabel" destination="1TV-Xo-bve" id="PeT-Wk-eu9"/>
+                                        <outlet property="lblResponse" destination="Bxh-Pa-hL4" id="XMm-WH-i9A"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="324" y="29"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="AAk-8z-61c">
+            <objects>
+                <controller id="exx-7f-UXx"/>
+            </objects>
+            <point key="canvasLocation" x="324" y="306"/>
         </scene>
     </scenes>
 </document>

@@ -6,8 +6,10 @@
 //  Copyright © 2017 alejandroCortizoFranza. All rights reserved.
 //
 
-import UIKit
+import WatchKit
 
 class ControllerGroup: NSObject {
+    @IBOutlet var lblLabel: WKInterfaceLabel!
 
+    @IBOutlet var lblResponse: WKInterfaceLabel!
 }
