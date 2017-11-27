@@ -66,6 +66,11 @@ class RutaDetalleViewController: UIViewController {
             sigVista.setRuta(ruta:ruta)
             
         }
+        if segue.identifier == "mapController" {
+            var sigVista = segue.destination as! MapViewController
+            sigVista.ruta = ruta
+            
+        }
     }
     
     

@@ -14,6 +14,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var map: MKMapView!
     
+    @IBOutlet weak var rutaText: UILabel!
     let serverData="http://199.233.252.86/201713/printf/rutaDetalle.json"
     var jsonParser:JsonParser!
     var indice = 0
@@ -48,8 +49,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         identifier = self.restorationIdentifier
         jsonParser = JsonParser(serverData:serverData)
         
-        ruta  = jsonParser.rutaJsonToObject()
-        print("------Hola-------")
+        //ruta  = jsonParser.rutaJsonToObject()
+        rutaText.text = ruta.getRuta()
+        
+        
         paradas = ruta.getParadasDeRuta()
         
         for p in paradas{

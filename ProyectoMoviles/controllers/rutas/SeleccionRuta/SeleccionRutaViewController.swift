@@ -14,7 +14,7 @@ class SeleccionRutaViewController:  UIViewController, UITableViewDataSource, UIT
 
     let serverData="http://199.233.252.86/201713/printf/rutas.json"
     let textCellIdentifier = "textCell"
-    var datosFiltrados = [Any]()
+    var datosFiltrados = [ObjectRutas]()
     let searchController = UISearchController(searchResultsController: nil)
     var indice = 0
     var nombreRuta = String()
@@ -57,10 +57,12 @@ class SeleccionRutaViewController:  UIViewController, UITableViewDataSource, UIT
         
         if (searchController.searchBar.text?.count == 0)  {
             datosFiltrados = coleccionRutasObject
+            self.tableView.reloadData()
         } else {
             print(searchController.searchBar.text)
             datosFiltrados = coleccionRutasObject.filter {
                 let nombreRuta=$0.nombre;
+                print(nombreRuta.lowercased().contains(searchController.searchBar.text!.lowercased()))
                 return(nombreRuta.lowercased().contains(searchController.searchBar.text!.lowercased()))
             }
             
@@ -80,8 +82,9 @@ class SeleccionRutaViewController:  UIViewController, UITableViewDataSource, UIT
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath) as! SeleccionRutaCellViewController
-        let ruta = coleccionRutasObject[indexPath.row]
-      
+        let ruta = datosFiltrados[indexPath.row]
+        
+        
         cell.nombreRuta.text = ruta.getNombreRuta()
         cell.numeroRuta.text = ruta.ruta
         
@@ -97,7 +100,7 @@ class SeleccionRutaViewController:  UIViewController, UITableViewDataSource, UIT
         //let sigVista=segue.destination as! DetalleRutasViewController
         let sigVistaAux = segue.destination as! UITabBarController
         let nav = sigVistaAux.viewControllers![0] as! DetalleRutasViewController
-        nav.setRuta(objectRuta: coleccionRutasObject[tableView.indexPathForSelectedRow!.row])
+        nav.setRuta(objectRuta: datosFiltrados[tableView.indexPathForSelectedRow!.row])
     }
     
 
