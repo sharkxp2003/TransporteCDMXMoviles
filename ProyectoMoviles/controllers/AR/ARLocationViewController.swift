@@ -15,14 +15,18 @@ class ARLocationViewController: UIViewController {
     var sceneLocationView = SceneLocationView()
     var ruta:ObjectRutas!
     
+    
+    
     let url = "http://199.233.252.86/201713/printf/rutasPrueba.json"
     var jsonParser:JsonParser!
     
+    @IBOutlet weak var viewAR: UIView!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         sceneLocationView.run()
         
@@ -39,7 +43,7 @@ class ARLocationViewController: UIViewController {
             sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
         }
         
-        view.addSubview(sceneLocationView)
+        viewAR.addSubview(sceneLocationView)
     }
     
     override func viewDidLayoutSubviews() {

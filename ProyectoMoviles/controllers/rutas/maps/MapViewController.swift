@@ -27,6 +27,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     var nombres = [String]()
     var i:Int = 0;
     var n:String = "";
+    var identifier:String?
     
     struct Location {
         let title: String
@@ -44,7 +45,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     */
     
     override func viewDidLoad() {
-    
+        identifier = self.restorationIdentifier
         jsonParser = JsonParser(serverData:serverData)
         
         ruta  = jsonParser.rutaJsonToObject()
@@ -120,5 +121,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         super.didReceiveMemoryWarning()
     }
 
+    
+    override func prepare (for segue: UIStoryboardSegue, sender: Any?) {
+        //let sigVista=segue.destination as! DetalleRutasViewController
+        let sigVistaAux = segue.destination as! UITabBarController
+        let nav = sigVistaAux.viewControllers![0] as! DetalleRutasViewController
+        
+    }
+    
+    
 
 }

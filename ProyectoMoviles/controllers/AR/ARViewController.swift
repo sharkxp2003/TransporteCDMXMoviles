@@ -46,6 +46,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
         scene.rootNode.addChildNode(textPos)
         sceneView.scene = scene
         
+        
     }
     
     func textFunc (position: SCNVector3) -> SCNNode {

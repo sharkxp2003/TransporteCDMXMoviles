@@ -8,55 +8,32 @@
 
 import UIKit
 
-class NotificationViewController: UITableViewController {
+class NotificationViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
         
-        let serverData="http://199.233.252.86/201713/printf/notificacion.json"
+    let serverData="http://199.233.252.86/201713/printf/notificacion.json"
+    let textCellIdentifier = "textCell"
         
-        var dataArray:[Any]?
-    
-        let decoder = JSONDecoder()
-    
-        struct DetailNotification:Codable {
-            let id:Int
-            let hora:String
-            let descripcion:String
-        }
-    
-    struct Notification:Codable {
-        let detail:DetailNotification
-    }
+    var dataArray:[Any]?
+    var jsonParser:JsonParser!
+    var coleccionNotificaciones:[ObjectNotificaciones] = [ObjectNotificaciones]()
+    var prevSeg : String?
     
     
-        
-        // funcion que convierte de JSON a Array
-        func JSONParseArray(_ string: String) -> [AnyObject]{
-            if let data = string.data(using: String.Encoding.utf8){
-                do{
-                    if let array = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers)  as? [AnyObject] {
-                        return array
-                    }
-                }catch{
-                    print("error")
-                }
-            }
-            return [AnyObject]()
-        }
+    @IBOutlet weak var tableView: UITableView!
+    
+    
         
         override func viewDidLoad() {
             super.viewDidLoad()
             
-            let url = URL(string: serverData)
-            let datosJSON = try! Data(contentsOf: url!)
-            dataArray = try! JSONSerialization.jsonObject(with: datosJSON) as? [Any]
-         
             
-            //let url = URL(string: serverData)
-            //let datosJSON = try! Data(contentsOf: url!, options : [])
-            
+            tableView.delegate = self
+            tableView.dataSource = self
+        
+            jsonParser = JsonParser(serverData: serverData)
+            coleccionNotificaciones = jsonParser.notificacionesJsonToObject()
+            print(coleccionNotificaciones[0].descripcion)
 
-            
-            
-            print(dataArray)
         }
         
         override func didReceiveMemoryWarning() {
@@ -66,30 +43,34 @@ class NotificationViewController: UITableViewController {
         
         // MARK: - Table view data source
         
-        override func numberOfSections(in tableView: UITableView) -> Int {
+        func numberOfSections(in tableView: UITableView) -> Int {
             // #warning Incomplete implementation, return the number of sections
             return 1
         }
         
-        override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             // #warning Incomplete implementation, return the number of rows
-            return (dataArray?.count)!
+            return coleccionNotificaciones.count
         }
         
         
-        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "EntradaRuta", for: indexPath)
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath) as! NotificationCellController
+            let notificacion = coleccionNotificaciones[indexPath.row]
             
-            let notificacion = dataArray?[indexPath.row] as! [String: AnyObject]
-            
-            let hora:String = notificacion["hora"] as! String
-            let descripcion:String = notificacion["descripcion"] as! String
-            
-            print(notificacion)
-            print(hora)
-            cell.textLabel?.text = "     "+hora+" "+descripcion
+            cell.labelHora.text = notificacion.hora
+            cell.labelDescripcion.text = notificacion.descripcion
             
             return cell
         }
+    
+    override func prepare (for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if (prevSeg == "mapController") {
+            var sigVista=segue.destination as! MapViewController
+        }
+        
+        
+    }
 }
 

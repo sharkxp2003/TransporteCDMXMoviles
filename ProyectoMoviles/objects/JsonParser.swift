@@ -67,6 +67,16 @@ class JsonParser {
         let rutas:[Ruta]
     }
     
+    struct DetailNotification:Codable {
+        let id:Int
+        let hora:String
+        let descripcion:String
+    }
+    
+    struct Notification:Codable {
+        let detail:[DetailNotification]
+    }
+    
     
     init(serverData: String) {
         self.serverData = serverData
@@ -138,8 +148,20 @@ class JsonParser {
         }
         
         return coleccionEventos
-        
-        
+    }
+    
+    func notificacionesJsonToObject() -> [ObjectNotificaciones] {
+        let url = URL(string: serverData)
+        let datosJSON = try! Data(contentsOf: url!, options:[])
+        let notificaciones = try! decoder.decode(Notification.self,from:datosJSON)
+        var colecccionObjNotificacion:[ObjectNotificaciones] = [ObjectNotificaciones]()
+        for notificacion in notificaciones.detail {
+            var objNotificacion = ObjectNotificaciones(id:notificacion.id,
+                                                       hora:notificacion.hora,
+                                                       descripcion:notificacion.descripcion)
+            colecccionObjNotificacion.append(objNotificacion)
+        }
+        return colecccionObjNotificacion
     }
         
         

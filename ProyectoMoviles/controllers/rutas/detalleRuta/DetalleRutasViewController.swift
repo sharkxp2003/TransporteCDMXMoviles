@@ -62,7 +62,6 @@ class DetalleRutasViewController: UIViewController,UITableViewDataSource, UITabl
         
         if segue.identifier == "perfil" {
             var sigVista=segue.destination as! UserViewController
-            
         }
         if segue.identifier == "notificaciones" {
             
