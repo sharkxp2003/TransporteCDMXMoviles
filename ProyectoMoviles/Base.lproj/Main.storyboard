@@ -409,10 +409,17 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AX8-yp-Tuu">
-                                <rect key="frame" x="195" y="601" width="65" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mapa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kho-TV-C5C">
+                                <rect key="frame" x="301" y="166" width="43" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Ver mapa"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AX8-yp-Tuu">
+                                <rect key="frame" x="305" y="137" width="43" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Ver mapa" image="mapa"/>
                                 <connections>
                                     <segue destination="6ff-mH-7tc" kind="show" id="OQN-gJ-1ZR"/>
                                 </connections>
@@ -440,7 +447,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JLG-aU-gpx" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="ncs-vZ-sSQ"/>
             </objects>
-            <point key="canvasLocation" x="580" y="6327"/>
+            <point key="canvasLocation" x="580" y="6326.9865067466271"/>
         </scene>
         <!--Inicio-->
         <scene sceneID="SlI-Fa-GWg">
@@ -1449,6 +1456,7 @@ Professor: José M. Molina Espinosa</string>
         <image name="labCDMXimg" width="513" height="312"/>
         <image name="location" width="30" height="30"/>
         <image name="logoTec" width="1280" height="339"/>
+        <image name="mapa" width="30" height="30"/>
         <image name="notification" width="20" height="20"/>
         <image name="paradasRuta" width="370" height="757"/>
         <image name="rectangleLogin" width="567" height="356"/>
@@ -1458,6 +1466,7 @@ Professor: José M. Molina Espinosa</string>
         <image name="warning" width="185" height="163"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="eFw-2d-O3v"/>
         <segue reference="285-gv-OKJ"/>
         <segue reference="VrO-Oh-vgy"/>
         <segue reference="hBL-5R-zMg"/>
