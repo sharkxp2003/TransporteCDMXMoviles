@@ -25,6 +25,7 @@ class RutaDetalleViewController: UIViewController {
         super.viewDidLoad()
         
         jsonParser = JsonParser(serverData: serverData)
+       
         ruta = auxRuta == nil ? jsonParser.rutaJsonToObject() : auxRuta
         nombre.text = ruta.getNombreRuta()
         rutaInicio.text = ruta.getInicioRuta()

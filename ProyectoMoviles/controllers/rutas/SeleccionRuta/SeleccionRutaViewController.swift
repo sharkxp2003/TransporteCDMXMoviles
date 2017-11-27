@@ -34,6 +34,7 @@ class SeleccionRutaViewController:  UIViewController, UITableViewDataSource, UIT
 
         coleccionRutasObject = jsonParser.rutasJsonToObject()
         
+        datosFiltrados = coleccionRutasObject
         
         //usar la vista actual para presentar los resultados de la búsqueda
         searchController.searchResultsUpdater = self
@@ -54,9 +55,10 @@ class SeleccionRutaViewController:  UIViewController, UITableViewDataSource, UIT
     
     func updateSearchResults(for searchController: UISearchController) {
         
-        if searchController.searchBar.text! == "" {
-            datosFiltrados = coleccionRutasObject;
+        if (searchController.searchBar.text?.count == 0)  {
+            datosFiltrados = coleccionRutasObject
         } else {
+            print(searchController.searchBar.text)
             datosFiltrados = coleccionRutasObject.filter {
                 let nombreRuta=$0.nombre;
                 return(nombreRuta.lowercased().contains(searchController.searchBar.text!.lowercased()))
@@ -73,7 +75,7 @@ class SeleccionRutaViewController:  UIViewController, UITableViewDataSource, UIT
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // remplazar el uso de nuevoArray por datosFiltrados
-        return (coleccionRutasObject.count)
+        return (datosFiltrados.count)
     }
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

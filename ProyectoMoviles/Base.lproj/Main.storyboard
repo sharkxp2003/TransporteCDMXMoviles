@@ -1394,6 +1394,24 @@ Professor: José M. Molina Espinosa</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Guardar captura" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jE2-2k-bUf">
+                                <rect key="frame" x="299" y="67" width="69" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pj-Ul-xLV">
+                                <rect key="frame" x="286" y="35" width="94" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="guardarCaptura"/>
+                                <connections>
+                                    <action selector="screenshot:" destination="mMv-fs-6XQ" eventType="touchDown" id="UPe-3Q-MVf"/>
+                                    <action selector="screenshot:" destination="mMv-fs-6XQ" eventType="touchUpInside" id="WVf-xz-9PJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1403,7 +1421,7 @@ Professor: José M. Molina Espinosa</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lw4-5h-VfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2446" y="6801"/>
+            <point key="canvasLocation" x="2445.5999999999999" y="6800.1499250374818"/>
         </scene>
     </scenes>
     <resources>
@@ -1424,6 +1442,7 @@ Professor: José M. Molina Espinosa</string>
         <image name="clock" width="20" height="18"/>
         <image name="crossIcon" width="10" height="10"/>
         <image name="fondo rosa" width="640" height="574"/>
+        <image name="guardarCaptura" width="29" height="30"/>
         <image name="home" width="30" height="30"/>
         <image name="keyIcon" width="53" height="53"/>
         <image name="labCDMX" width="181" height="181"/>

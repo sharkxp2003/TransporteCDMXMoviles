@@ -46,18 +46,19 @@ class ARLocationViewController: UIViewController {
         viewAR.addSubview(sceneLocationView)
     }
     
-    @IBAction func screenshot(_ sender: UIBarButtonItem) {
-        //Create the UIImage
-        guard let layer = UIApplication.shared.keyWindow?.layer else { return }
-        let renderer = UIGraphicsImageRenderer(size: layer.frame.size)
-        let image = renderer.image(actions: { context in
-            layer.render(in: context.cgContext)
-        })
+
+    @IBAction func screenshot(_ sender: UIButton) {
         
-        //Save it to the camera roll
-        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, UIScreen.main.scale)
+        view.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
+        
     }
     
+ 
     
     
     override func viewDidLayoutSubviews() {
