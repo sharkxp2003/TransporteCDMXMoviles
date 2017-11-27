@@ -73,5 +73,17 @@ class ARLocationViewController: UIViewController {
         self.ruta = ruta
     }
     
+    override func prepare (for segue: UIStoryboardSegue, sender: Any?) {
+        //let sigVista=segue.destination as! DetalleRutasViewController
+        if (segue.identifier == "backAR") {
+            let sigVistaAux = segue.destination as! UITabBarController
+            let nav = sigVistaAux.viewControllers![0] as! DetalleRutasViewController
+            
+            nav.setRuta(objectRuta: ruta)
+        }
+        
+        
+    }
+    
 }
 

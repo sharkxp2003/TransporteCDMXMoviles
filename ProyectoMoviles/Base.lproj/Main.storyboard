@@ -1297,7 +1297,7 @@ Professor: José M. Molina Espinosa</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="notification"/>
                                 <connections>
-                                    <segue destination="ir3-sc-rK9" kind="show" id="1Pt-Op-VDp"/>
+                                    <segue destination="ir3-sc-rK9" kind="show" identifier="notificacion" id="1Pt-Op-VDp"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ruta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsl-9U-EHh">
@@ -1467,7 +1467,7 @@ Professor: José M. Molina Espinosa</string>
         <image name="warning" width="185" height="163"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="T8g-hQ-S5w"/>
+        <segue reference="285-gv-OKJ"/>
         <segue reference="1Pt-Op-VDp"/>
         <segue reference="hBL-5R-zMg"/>
     </inferredMetricsTieBreakers>
