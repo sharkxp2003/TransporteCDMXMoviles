@@ -9,23 +9,35 @@
 import UIKit
 import ARCL
 import CoreLocation
+import ARKit
 
 class ARLocationViewController: UIViewController {
     var sceneLocationView = SceneLocationView()
     var ruta:ObjectRutas!
+    
+    let url = "http://199.233.252.86/201713/printf/rutasPrueba.json"
+    var jsonParser:JsonParser!
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         sceneLocationView.run()
         
+        jsonParser = JsonParser(serverData:url)
+        ruta = jsonParser.rutaJsonToObject()
         
-        
-        
-        
-        
-        
-        
+        for parada in ruta.getParadasDeRuta() {
+            var latitud = parada.direccion.latitud
+            var longitud = parada.direccion.longitud
+            var location = CLLocation(latitude:latitud,longitude:longitud)
+            let image = UIImage(named:"pin")!
+           // var annotationNode = LocationAnnotationNode(
+            var annotationNode = LocationAnnotationNode(location: location, image:image)
+            sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
+        }
         
         view.addSubview(sceneLocationView)
     }
@@ -41,5 +53,6 @@ class ARLocationViewController: UIViewController {
     func setRuta(ruta : ObjectRutas) {
         self.ruta = ruta
     }
-
+    
 }
+

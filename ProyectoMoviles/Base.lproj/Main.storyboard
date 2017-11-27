@@ -1501,7 +1501,7 @@
         <!--ARViewController-->
         <scene sceneID="zbi-9g-rV6">
             <objects>
-                <viewController id="mMv-fs-6XQ" userLabel="ARViewController" customClass="ARViewController" customModule="ProyectoMoviles" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mMv-fs-6XQ" userLabel="ARViewController" customClass="ARLocationViewController" customModule="ProyectoMoviles" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zmj-fa-JVT"/>
                         <viewControllerLayoutGuide type="bottom" id="Nz8-Id-CvO"/>
@@ -1510,10 +1510,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mcI-VL-TWW">
-                                <rect key="frame" x="0.0" y="123" width="375" height="451"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </arscnView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundEvents" translatesAutoresizingMaskIntoConstraints="NO" id="jDX-kS-VkE">
                                 <rect key="frame" x="0.0" y="0.0" width="377" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1536,9 +1532,6 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
-                    <connections>
-                        <outlet property="sceneView" destination="mcI-VL-TWW" id="93d-Ae-lOG"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lw4-5h-VfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1629,6 +1622,7 @@
         <image name="warning" width="185" height="163"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="eFw-2d-O3v"/>
         <segue reference="2WY-yy-LU9"/>
         <segue reference="skM-mI-jZ2"/>
         <segue reference="hBL-5R-zMg"/>

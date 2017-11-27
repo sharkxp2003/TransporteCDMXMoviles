@@ -74,7 +74,10 @@ class DetalleRutasViewController: UIViewController,UITableViewDataSource, UITabl
         }
         if segue.identifier == "ARControllerSegue" {
             var sigVista = segue.destination as! ARLocationViewController
+            print("===============================")
+            print(ruta.getParadasDeRuta()[0].direccion.latitud)
             
+            sigVista.setRuta(ruta:ruta)
             
         }
         

@@ -55,6 +55,19 @@ class RutaDetalleViewController: UIViewController {
     }
     
     
+    override func prepare (for segue: UIStoryboardSegue, sender: Any?) {
+
+        if segue.identifier == "ARControllerSegue" {
+            var sigVista = segue.destination as! ARLocationViewController
+            print("===============================")
+            print(ruta.getParadasDeRuta()[0].direccion.latitud)
+            
+            sigVista.setRuta(ruta:ruta)
+            
+        }
+    }
+    
+    
 
     
     
