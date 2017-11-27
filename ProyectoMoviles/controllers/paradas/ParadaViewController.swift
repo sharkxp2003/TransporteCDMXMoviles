@@ -35,6 +35,11 @@ class ParadaViewController: UIViewController {
     func setParada (parada:ObjectParada) {
         self.parada = parada
     }
+    
+    override func prepare (for segue: UIStoryboardSegue, sender: Any?) {
+        var sigVista=segue.destination as! DetalleRutasViewController
+        sigVista.setRuta(objectRuta: ruta)
+    }
   
 
 }

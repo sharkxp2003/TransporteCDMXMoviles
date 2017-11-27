@@ -68,11 +68,6 @@ class RutaDetalleViewController: UIViewController {
     }
     
     
-
-    
-    
-    
-    
     func setRuta (ruta: ObjectRutas) {
         self.auxRuta = ruta
     }
