@@ -1467,8 +1467,9 @@ Professor: José M. Molina Espinosa</string>
         <image name="warning" width="185" height="163"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="eFw-2d-O3v"/>
         <segue reference="285-gv-OKJ"/>
-        <segue reference="1Pt-Op-VDp"/>
+        <segue reference="VrO-Oh-vgy"/>
         <segue reference="hBL-5R-zMg"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -14,6 +14,7 @@ import ARKit
 class ARLocationViewController: UIViewController {
     var sceneLocationView = SceneLocationView()
     var ruta:ObjectRutas!
+    var auxRuta:ObjectRutas!
     
     
     
@@ -70,7 +71,7 @@ class ARLocationViewController: UIViewController {
     
     
     func setRuta(ruta : ObjectRutas) {
-        self.ruta = ruta
+        self.auxRuta = ruta
     }
     
     override func prepare (for segue: UIStoryboardSegue, sender: Any?) {
@@ -79,7 +80,7 @@ class ARLocationViewController: UIViewController {
             let sigVistaAux = segue.destination as! UITabBarController
             let nav = sigVistaAux.viewControllers![0] as! DetalleRutasViewController
             
-            nav.setRuta(objectRuta: ruta)
+            nav.setRuta(objectRuta: auxRuta)
         }
         
         

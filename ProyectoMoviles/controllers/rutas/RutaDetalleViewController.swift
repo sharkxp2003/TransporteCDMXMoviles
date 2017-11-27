@@ -26,7 +26,8 @@ class RutaDetalleViewController: UIViewController {
         
         jsonParser = JsonParser(serverData: serverData)
        
-        ruta = auxRuta == nil ? jsonParser.rutaJsonToObject() : auxRuta
+        //ruta = auxRuta == nil ? jsonParser.rutaJsonToObject() : auxRuta
+        ruta = auxRuta
         nombre.text = ruta.getNombreRuta()
         rutaInicio.text = ruta.getInicioRuta()
         rutaFin.text = ruta.getFinRuta()
@@ -60,9 +61,6 @@ class RutaDetalleViewController: UIViewController {
 
         if segue.identifier == "ARControllerSegue" {
             var sigVista = segue.destination as! ARLocationViewController
-            print("===============================")
-            print(ruta.getParadasDeRuta()[0].direccion.latitud)
-            
             sigVista.setRuta(ruta:ruta)
             
         }
@@ -76,6 +74,7 @@ class RutaDetalleViewController: UIViewController {
     
     func setRuta (ruta: ObjectRutas) {
         self.auxRuta = ruta
+        self.ruta = ruta
     }
     func setParada (parada:ObjectParada) {
         self.parada = parada
