@@ -1482,6 +1482,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.94434529540000001" green="0.34311580660000002" blue="0.66191583870000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.94434529540000001" green="0.34311580660000002" blue="0.66191583870000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedTintColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="xsx-je-MAv" kind="relationship" relationship="viewControllers" id="Vpc-eI-Ijo"/>
@@ -1573,6 +1583,7 @@
         <image name="warning" width="185" height="163"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="9h0-98-bVj"/>
         <segue reference="2XQ-Ef-4LC"/>
         <segue reference="VrO-Oh-vgy"/>
         <segue reference="hBL-5R-zMg"/>
