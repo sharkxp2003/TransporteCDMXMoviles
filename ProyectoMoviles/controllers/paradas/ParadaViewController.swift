@@ -37,8 +37,10 @@ class ParadaViewController: UIViewController {
     }
     
     override func prepare (for segue: UIStoryboardSegue, sender: Any?) {
-        var sigVista=segue.destination as! DetalleRutasViewController
-        sigVista.setRuta(objectRuta: ruta)
+        var sigVista=segue.destination as? UITabBarController
+        let inicio = sigVista?.viewControllers![0] as! DetalleRutasViewController
+        inicio.setRuta(objectRuta:ruta)
+        
     }
   
 

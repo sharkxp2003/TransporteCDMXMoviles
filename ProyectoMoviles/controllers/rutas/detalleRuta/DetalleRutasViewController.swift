@@ -31,6 +31,10 @@ class DetalleRutasViewController: UIViewController,UITableViewDataSource, UITabl
         tableView.dataSource = self
         ruta = cambioRuta == nil ? jsonParser.rutaJsonToObject() : cambioRuta
         rutaName.text = ruta.getNombreRuta()
+        
+        let rutaDetalleView = self.tabBarController?.viewControllers![1] as! RutaDetalleViewController
+        rutaDetalleView.auxRuta = ruta
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -73,9 +77,6 @@ class DetalleRutasViewController: UIViewController,UITableViewDataSource, UITabl
         }
         if segue.identifier == "ARControllerSegue" {
             var sigVista = segue.destination as! ARLocationViewController
-            print("===============================")
-            print(ruta.getParadasDeRuta()[0].direccion.latitud)
-            
             sigVista.setRuta(ruta:ruta)
             
         }
