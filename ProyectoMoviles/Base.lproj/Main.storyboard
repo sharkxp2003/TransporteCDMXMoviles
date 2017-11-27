@@ -532,7 +532,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bb7-zs-5Zi" id="Sw7-F9-tTI">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nbus" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiw-fe-cWi">
@@ -1331,7 +1331,7 @@ Professor: José M. Molina Espinosa</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HaY-vS-bcw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="k1o-Xg-B6X">
                     <connections>
-                        <segue destination="utE-QG-p4m" kind="show" id="T8g-hQ-S5w"/>
+                        <segue destination="utE-QG-p4m" kind="show" identifier="inicio" id="T8g-hQ-S5w"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
