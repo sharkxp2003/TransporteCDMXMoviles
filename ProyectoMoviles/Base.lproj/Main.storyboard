@@ -108,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1583" y="2866"/>
+            <point key="canvasLocation" x="-1449" y="3647"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="qL7-Im-ARL">
@@ -152,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQL-cB-Wa8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-639" y="2866"/>
+            <point key="canvasLocation" x="-505" y="3647"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="xY1-X7-AsT">
@@ -469,7 +469,13 @@
                             <outletCollection property="gestureRecognizers" destination="ncs-vZ-sSQ" appends="YES" id="3fh-WI-5jB"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Rutas" id="2vx-SS-np1"/>
+                    <tabBarItem key="tabBarItem" title="Rutas" image="location" selectedImage="location" id="2vx-SS-np1">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="keyPath">
+                                <color key="value" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <connections>
                         <outlet property="nombre" destination="uiQ-MN-bEe" id="Md0-3X-dt2"/>
                         <outlet property="rutaFin" destination="mN8-5T-BqV" id="pMj-2L-7Ld"/>
@@ -479,7 +485,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JLG-aU-gpx" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="ncs-vZ-sSQ"/>
             </objects>
-            <point key="canvasLocation" x="398" y="3665"/>
+            <point key="canvasLocation" x="580" y="6327"/>
         </scene>
         <!--Inicio-->
         <scene sceneID="SlI-Fa-GWg">
@@ -639,7 +645,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Inicio" image="increasing-stocks-graphic-of-bars" selectedImage="home-icon-silhouette" id="gdy-la-AUC"/>
+                    <tabBarItem key="tabBarItem" title="Inicio" image="home" selectedImage="home" id="gdy-la-AUC">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="rutaName" destination="fVj-kB-TBo" id="Taq-Ki-8St"/>
@@ -648,7 +660,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DDy-Ji-mFG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-639" y="3664"/>
+            <point key="canvasLocation" x="-2236" y="6327"/>
         </scene>
         <!--Seleccion Ruta View Controller-->
         <scene sceneID="x9B-Hy-vi2">
@@ -915,7 +927,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Eventos" id="Owh-uO-ufJ"/>
+                    <tabBarItem key="tabBarItem" title="Eventos" image="calendar-1" selectedImage="calendar-1" id="Owh-uO-ufJ">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="fVX-gv-MoA" id="uEy-VJ-2oF"/>
@@ -923,7 +941,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oxp-B3-3aR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1583.2" y="3665.217391304348"/>
+            <point key="canvasLocation" x="-858" y="6327"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="kTe-0i-DpQ">
@@ -1004,7 +1022,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wnu-A1-VTi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3142" y="5438"/>
+            <point key="canvasLocation" x="-3460" y="5436"/>
         </scene>
         <!--User View Controller-->
         <scene sceneID="LxI-lk-q4J">
@@ -1263,7 +1281,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hLT-By-APi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-639" y="4482"/>
+            <point key="canvasLocation" x="-2801" y="7424"/>
         </scene>
         <!--Notification View Controller-->
         <scene sceneID="3oV-Qq-nPd">
@@ -1277,41 +1295,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DG1-C7-CFL">
-                                <rect key="frame" x="0.0" y="215" width="375" height="452"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="textCell" rowHeight="60" id="qMb-RS-qRv" customClass="NotificationCellController" customModule="ProyectoMoviles" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qMb-RS-qRv" id="EkC-kx-N1d">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="horaph" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yQ-zg-h0e">
-                                                    <rect key="frame" x="33" y="19" width="55" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="descripcionph" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40h-Hq-aOn">
-                                                    <rect key="frame" x="188" y="19" width="109" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="labelDescripcion" destination="40h-Hq-aOn" id="4Ot-BB-dLT"/>
-                                            <outlet property="labelHora" destination="9yQ-zg-h0e" id="N7T-jq-gec"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundEvents" translatesAutoresizingMaskIntoConstraints="NO" id="2YF-Qp-pAe">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1349,6 +1332,41 @@
                                 <color key="textColor" red="0.91764705879999997" green="0.23137254900000001" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DG1-C7-CFL">
+                                <rect key="frame" x="0.0" y="215" width="375" height="452"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="textCell" rowHeight="60" id="qMb-RS-qRv" customClass="NotificationCellController" customModule="ProyectoMoviles" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qMb-RS-qRv" id="EkC-kx-N1d">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="horaph" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yQ-zg-h0e">
+                                                    <rect key="frame" x="33" y="19" width="55" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="descripcionph" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40h-Hq-aOn">
+                                                    <rect key="frame" x="188" y="19" width="109" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelDescripcion" destination="40h-Hq-aOn" id="4Ot-BB-dLT"/>
+                                            <outlet property="labelHora" destination="9yQ-zg-h0e" id="N7T-jq-gec"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1358,7 +1376,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5jB-pt-G1Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="398" y="4481"/>
+            <point key="canvasLocation" x="580" y="7451"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="Shd-bb-qTY">
@@ -1454,7 +1472,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1396" y="3663"/>
+            <point key="canvasLocation" x="2446" y="5871"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="tdB-Hr-toE">
@@ -1473,7 +1491,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2hc-ip-5Nu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-593" y="5437"/>
+            <point key="canvasLocation" x="-857" y="5437"/>
         </scene>
         <!--ARViewController-->
         <scene sceneID="zbi-9g-rV6">
@@ -1520,7 +1538,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lw4-5h-VfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="398" y="2866"/>
+            <point key="canvasLocation" x="2446" y="6801"/>
         </scene>
     </scenes>
     <resources>
@@ -1534,17 +1552,18 @@
         <image name="backgroundEvents" width="640" height="166"/>
         <image name="bus-3" width="128" height="128"/>
         <image name="bus2" width="56" height="58"/>
+        <image name="calendar-1" width="30" height="30"/>
         <image name="calendar2" width="112" height="110"/>
         <image name="camionCDMX" width="113" height="134"/>
         <image name="circulo" width="210" height="200"/>
         <image name="clock" width="20" height="18"/>
         <image name="crossIcon" width="10" height="10"/>
         <image name="fondo rosa" width="640" height="574"/>
-        <image name="home-icon-silhouette" width="16" height="16"/>
-        <image name="increasing-stocks-graphic-of-bars" width="16" height="16"/>
+        <image name="home" width="30" height="30"/>
         <image name="keyIcon" width="53" height="53"/>
         <image name="labCDMX" width="181" height="181"/>
         <image name="labCDMXimg" width="513" height="312"/>
+        <image name="location" width="30" height="30"/>
         <image name="notification" width="20" height="20"/>
         <image name="paradasRuta" width="370" height="757"/>
         <image name="rectangleLogin" width="567" height="356"/>
@@ -1554,8 +1573,8 @@
         <image name="warning" width="185" height="163"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="285-gv-OKJ"/>
-        <segue reference="1Pt-Op-VDp"/>
+        <segue reference="2XQ-Ef-4LC"/>
+        <segue reference="VrO-Oh-vgy"/>
         <segue reference="hBL-5R-zMg"/>
     </inferredMetricsTieBreakers>
 </document>
